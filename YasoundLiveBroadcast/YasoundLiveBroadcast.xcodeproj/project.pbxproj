@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		407A3D311557F83C00EA201F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407A3D301557F83C00EA201F /* Cocoa.framework */; };
+		407A3D3B1557F83C00EA201F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 407A3D391557F83C00EA201F /* InfoPlist.strings */; };
+		407A3D3D1557F83C00EA201F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 407A3D3C1557F83C00EA201F /* main.m */; };
+		407A3D411557F83C00EA201F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 407A3D3F1557F83C00EA201F /* Credits.rtf */; };
+		407A3D441557F83C00EA201F /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 407A3D431557F83C00EA201F /* AppDelegate.mm */; };
+		407A3D471557F83C00EA201F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407A3D451557F83C00EA201F /* MainMenu.xib */; };
+		407A3D4E1557F88B00EA201F /* Broadcaster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 407A3D4D1557F88B00EA201F /* Broadcaster.cpp */; };
+		407A3D5515580EEA00EA201F /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407A3D5415580EEA00EA201F /* CoreAudio.framework */; };
+		407A3D5C15581EB600EA201F /* libmp3lame.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 407A3D5B15581EB500EA201F /* libmp3lame.dylib */; };
+		407A3D5E1558247D00EA201F /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 407A3D5D1558247C00EA201F /* libcurl.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		407A3D2C1557F83C00EA201F /* YasoundLiveBroadcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YasoundLiveBroadcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		407A3D301557F83C00EA201F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		407A3D331557F83C00EA201F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		407A3D341557F83C00EA201F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		407A3D351557F83C00EA201F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		407A3D381557F83C00EA201F /* YasoundLiveBroadcast-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YasoundLiveBroadcast-Info.plist"; sourceTree = "<group>"; };
+		407A3D3A1557F83C00EA201F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		407A3D3C1557F83C00EA201F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		407A3D3E1557F83C00EA201F /* YasoundLiveBroadcast-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YasoundLiveBroadcast-Prefix.pch"; sourceTree = "<group>"; };
+		407A3D401557F83C00EA201F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		407A3D421557F83C00EA201F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		407A3D431557F83C00EA201F /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		407A3D461557F83C00EA201F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		407A3D4D1557F88B00EA201F /* Broadcaster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Broadcaster.cpp; sourceTree = "<group>"; };
+		407A3D4F1557F89A00EA201F /* Broadcaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Broadcaster.h; sourceTree = "<group>"; };
+		407A3D501558000900EA201F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		407A3D521558001200EA201F /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		407A3D5415580EEA00EA201F /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		407A3D5B15581EB500EA201F /* libmp3lame.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmp3lame.dylib; path = usr/local/lib/libmp3lame.dylib; sourceTree = SDKROOT; };
+		407A3D5D1558247C00EA201F /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		407A3D291557F83C00EA201F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				407A3D5E1558247D00EA201F /* libcurl.dylib in Frameworks */,
+				407A3D5C15581EB600EA201F /* libmp3lame.dylib in Frameworks */,
+				407A3D5515580EEA00EA201F /* CoreAudio.framework in Frameworks */,
+				407A3D311557F83C00EA201F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		407A3D211557F83B00EA201F = {
+			isa = PBXGroup;
+			children = (
+				407A3D5D1558247C00EA201F /* libcurl.dylib */,
+				407A3D5B15581EB500EA201F /* libmp3lame.dylib */,
+				407A3D5415580EEA00EA201F /* CoreAudio.framework */,
+				407A3D521558001200EA201F /* AudioUnit.framework */,
+				407A3D501558000900EA201F /* AudioToolbox.framework */,
+				407A3D361557F83C00EA201F /* YasoundLiveBroadcast */,
+				407A3D2F1557F83C00EA201F /* Frameworks */,
+				407A3D2D1557F83C00EA201F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		407A3D2D1557F83C00EA201F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				407A3D2C1557F83C00EA201F /* YasoundLiveBroadcast.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		407A3D2F1557F83C00EA201F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				407A3D301557F83C00EA201F /* Cocoa.framework */,
+				407A3D321557F83C00EA201F /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		407A3D321557F83C00EA201F /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				407A3D331557F83C00EA201F /* AppKit.framework */,
+				407A3D341557F83C00EA201F /* CoreData.framework */,
+				407A3D351557F83C00EA201F /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		407A3D361557F83C00EA201F /* YasoundLiveBroadcast */ = {
+			isa = PBXGroup;
+			children = (
+				407A3D421557F83C00EA201F /* AppDelegate.h */,
+				407A3D431557F83C00EA201F /* AppDelegate.mm */,
+				407A3D451557F83C00EA201F /* MainMenu.xib */,
+				407A3D371557F83C00EA201F /* Supporting Files */,
+				407A3D4D1557F88B00EA201F /* Broadcaster.cpp */,
+				407A3D4F1557F89A00EA201F /* Broadcaster.h */,
+			);
+			path = YasoundLiveBroadcast;
+			sourceTree = "<group>";
+		};
+		407A3D371557F83C00EA201F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				407A3D381557F83C00EA201F /* YasoundLiveBroadcast-Info.plist */,
+				407A3D391557F83C00EA201F /* InfoPlist.strings */,
+				407A3D3C1557F83C00EA201F /* main.m */,
+				407A3D3E1557F83C00EA201F /* YasoundLiveBroadcast-Prefix.pch */,
+				407A3D3F1557F83C00EA201F /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		407A3D2B1557F83C00EA201F /* YasoundLiveBroadcast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 407A3D4A1557F83C00EA201F /* Build configuration list for PBXNativeTarget "YasoundLiveBroadcast" */;
+			buildPhases = (
+				407A3D281557F83C00EA201F /* Sources */,
+				407A3D291557F83C00EA201F /* Frameworks */,
+				407A3D2A1557F83C00EA201F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YasoundLiveBroadcast;
+			productName = YasoundLiveBroadcast;
+			productReference = 407A3D2C1557F83C00EA201F /* YasoundLiveBroadcast.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		407A3D231557F83B00EA201F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = MXP4;
+			};
+			buildConfigurationList = 407A3D261557F83B00EA201F /* Build configuration list for PBXProject "YasoundLiveBroadcast" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 407A3D211557F83B00EA201F;
+			productRefGroup = 407A3D2D1557F83C00EA201F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				407A3D2B1557F83C00EA201F /* YasoundLiveBroadcast */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		407A3D2A1557F83C00EA201F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				407A3D3B1557F83C00EA201F /* InfoPlist.strings in Resources */,
+				407A3D411557F83C00EA201F /* Credits.rtf in Resources */,
+				407A3D471557F83C00EA201F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		407A3D281557F83C00EA201F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				407A3D3D1557F83C00EA201F /* main.m in Sources */,
+				407A3D441557F83C00EA201F /* AppDelegate.mm in Sources */,
+				407A3D4E1557F88B00EA201F /* Broadcaster.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		407A3D391557F83C00EA201F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				407A3D3A1557F83C00EA201F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		407A3D3F1557F83C00EA201F /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				407A3D401557F83C00EA201F /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		407A3D451557F83C00EA201F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				407A3D461557F83C00EA201F /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		407A3D481557F83C00EA201F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		407A3D491557F83C00EA201F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		407A3D4B1557F83C00EA201F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YasoundLiveBroadcast/YasoundLiveBroadcast-Prefix.pch";
+				INFOPLIST_FILE = "YasoundLiveBroadcast/YasoundLiveBroadcast-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		407A3D4C1557F83C00EA201F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YasoundLiveBroadcast/YasoundLiveBroadcast-Prefix.pch";
+				INFOPLIST_FILE = "YasoundLiveBroadcast/YasoundLiveBroadcast-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		407A3D261557F83B00EA201F /* Build configuration list for PBXProject "YasoundLiveBroadcast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				407A3D481557F83C00EA201F /* Debug */,
+				407A3D491557F83C00EA201F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		407A3D4A1557F83C00EA201F /* Build configuration list for PBXNativeTarget "YasoundLiveBroadcast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				407A3D4B1557F83C00EA201F /* Debug */,
+				407A3D4C1557F83C00EA201F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 407A3D231557F83B00EA201F /* Project object */;
+}

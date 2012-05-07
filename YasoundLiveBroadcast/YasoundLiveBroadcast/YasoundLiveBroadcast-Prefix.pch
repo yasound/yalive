@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'YasoundLiveBroadcast' target in the 'YasoundLiveBroadcast' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
