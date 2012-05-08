@@ -17,6 +17,7 @@
 		407A3D5515580EEA00EA201F /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407A3D5415580EEA00EA201F /* CoreAudio.framework */; };
 		407A3D5C15581EB600EA201F /* libmp3lame.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 407A3D5B15581EB500EA201F /* libmp3lame.dylib */; };
 		407A3D5E1558247D00EA201F /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 407A3D5D1558247C00EA201F /* libcurl.dylib */; };
+		E577A6D61559509E00B5B9A1 /* Mp3Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E577A6D51559509E00B5B9A1 /* Mp3Header.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		407A3D5415580EEA00EA201F /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		407A3D5B15581EB500EA201F /* libmp3lame.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmp3lame.dylib; path = usr/local/lib/libmp3lame.dylib; sourceTree = SDKROOT; };
 		407A3D5D1558247C00EA201F /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
+		E577A6D31559506300B5B9A1 /* Mp3Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mp3Header.h; sourceTree = "<group>"; };
+		E577A6D51559509E00B5B9A1 /* Mp3Header.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mp3Header.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 				407A3D371557F83C00EA201F /* Supporting Files */,
 				407A3D4D1557F88B00EA201F /* Broadcaster.cpp */,
 				407A3D4F1557F89A00EA201F /* Broadcaster.h */,
+				E577A6D31559506300B5B9A1 /* Mp3Header.h */,
+				E577A6D51559509E00B5B9A1 /* Mp3Header.cpp */,
 			);
 			path = YasoundLiveBroadcast;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 				407A3D3D1557F83C00EA201F /* main.m in Sources */,
 				407A3D441557F83C00EA201F /* AppDelegate.mm in Sources */,
 				407A3D4E1557F88B00EA201F /* Broadcaster.cpp in Sources */,
+				E577A6D61559509E00B5B9A1 /* Mp3Header.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +315,7 @@
 				407A3D4C1557F83C00EA201F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

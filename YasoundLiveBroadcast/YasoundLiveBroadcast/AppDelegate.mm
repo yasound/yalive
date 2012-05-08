@@ -15,14 +15,14 @@
 
 - (void)dealloc
 {
-    [super dealloc];
+  [super dealloc];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+  // Insert code here to initialize your application
     
-    Broadcaster* pBroadcaster = new Broadcaster();
+  Broadcaster* pBroadcaster = new Broadcaster();
 }
 
 @end
