@@ -10,6 +10,7 @@
 #include <iostream>
 #include <AudioToolbox/AudioServices.h>
 #include <stdio.h>
+#include "Mp3Header.h"
 
 #ifdef WIN32
 #include <WinSock2.h>
@@ -397,7 +398,10 @@ bool Broadcaster::Broadcast(std::vector<std::vector<float> >& input, int bufferS
   {
     for (int c = 0; c < channels; c++)
     {
-      input[c][i] *= 32768;
+      if (input[c][i] >= 0)
+        input[c][i] *= 32767;
+      else
+        input[c][i] *= 32768;
     }
   }
   
@@ -412,23 +416,39 @@ bool Broadcaster::Broadcast(std::vector<std::vector<float> >& input, int bufferS
   float* rightbuffer = &input[1][0];
   int res = lame_encode_buffer_float(mLameFlags, leftbuffer, rightbuffer, bufferSize, mpLameOutBuffer, mLameOutBufferSize);
   
-  if (res > 0)
-  {    
-    int size = res;
-    res = send(mSocket, mpLameOutBuffer, size, 0);
-    if (res != size)
+  FILE* pFile = fopen("/Users/meeloo/Desktop/live.mp3", "a");
+  int size = res;
+  int offset = 0;
+  while (size > 0)
+  {
+    Mp3Header hdr(mpLameOutBuffer + offset);
+    assert(hdr.IsValid());
+    int s = hdr.GetFrameByteLength();
+    res -= s;
+
+    if (hdr.GetFrameDuration() > 0)
     {
-      DumpError(errno);
-      return false;
+      int done = send(mSocket, mpLameOutBuffer + offset, s, 0);
+      if (done != s)
+      {
+        DumpError(errno);
+        return false;
+      }
+      
+      if (pFile)
+        fwrite(mpLameOutBuffer + offset, sizeof(unsigned char), s, pFile);
+    } 
+    else
+    {
+      printf("Skip empty frame?\n");
     }
 
-    FILE* pFile = fopen("/Users/meeloo/Desktop/live.mp3", "a");
-    if (pFile)
-    {
-      fwrite(mpLameOutBuffer, sizeof(unsigned char), size, pFile);
-      fclose(pFile);
-    }
+    offset += s;
+    size -= s;
   }
+
+  if (pFile)
+    fclose(pFile);
   return true;
 }
 
