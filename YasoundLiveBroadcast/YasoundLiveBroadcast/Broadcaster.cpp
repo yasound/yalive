@@ -23,7 +23,7 @@
 #include <sys/ioctl.h>
 #endif
 
-#define PRODUCTION 0
+#define PRODUCTION 1
 
 void OnLameError(const char *format, va_list ap);
 void OnLameDebug(const char *format, va_list ap);
@@ -246,7 +246,10 @@ bool Broadcaster::InitNetwork()
   }
   
 #if PRODUCTION
-  const char* radioid = "ce68c12adce8450fab688ac222740cdf";
+  // Radio meeloo:
+  //const char* radioid = "411947613525401aaefdce74ef65cda2";
+  // Radio Techtour:
+  const char* radioid = "4ecf1fb5726046be96f51e75003be0e6";
 #else
   const char* radioid = "ce68c12adce8450fab688ac222740cdf";
 #endif
