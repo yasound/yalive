@@ -36,27 +36,28 @@ public:
   // Callbacks from the SAX parser class:
   virtual void StartElement(const nuiXML_Char* name, const nuiXML_Char** atts)
   {
-    NGL_OUT("Start Element %s", name);
+    //NGL_OUT("Start Element %s\n", name);
   }
 
   virtual void EndElement(const nuiXML_Char* name)
   {
-    NGL_OUT("End Element %s", name);
+    //NGL_OUT("End Element %s\n", name);
   }
 
   virtual void Characters(const nuiXML_Char* s, int len)
   {
-    NGL_OUT("Chars %s", s);
+    nglString str(s, len);
+    //NGL_OUT("Chars %s\n", str.GetChars());
   }
 
   virtual void ProcessingInstruction(const nuiXML_Char* target, const nuiXML_Char* data)
   {
-    NGL_OUT("Processing instructions %s -> %s", target, data);
+    //NGL_OUT("Processing instructions %s -> %s\n", target, data);
   }
 
   virtual void Comment(const nuiXML_Char* data)
   {
-    NGL_OUT("Comment %s", data);
+    //NGL_OUT("Comment %s\n", data);
   }
 
 protected:
