@@ -1,0 +1,44 @@
+//
+// main nui3 stylesheet
+//
+
+// you can include your stylesheets this way:
+// #include "myStylesheet.css"
+
+// remember each stylesheet file must have at least a blank ending line, 
+// or the stylehsheet parsing may not work properly
+
+
++nuiSimpleContainer Deck
+{
+  UserWidth : 300;
+  UserHeight : 300;
+
+  +nuiVBox
+  {
+    Position: top;
+    
+    +nuiLabel{ Text: DeckName; }
+    +nuiLabel SongName{ Text: "Current song"; }
+  }
+
+  +nuiButton PlayPause
+  {
+    +nuiLabel{ Text: "Play/Pause"; }
+    
+    Position: topleft;
+  }
+
+  +nuiButton ChooseSong
+  {
+    +nuiLabel{ Text: "Choose Song"; }
+    Position: topright;
+  }
+
+  +nuiSlider Volume
+  {
+    Orientation: horizontal;
+    Position: bottom;
+  }
+}
+
