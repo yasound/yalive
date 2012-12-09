@@ -7,8 +7,9 @@
 //
 
 #include "iTunesLibrary.h"
+#include "nuiStopWatch.h"
 
-class iTunesXMLParser: public nuiXMLParser
+class iTunesXMLParser
 {
 public:
   iTunesXMLParser(iTunesLibrary* pLib)
@@ -21,7 +22,53 @@ public:
   {
     nglIStream* pStream = rPath.OpenRead();
 
-    bool res = Parse(pStream);
+
+    bool res;
+
+    nuiXML xml;
+    {
+      nuiStopWatch sw("Load iTunes XML");
+      res = xml.Load(*pStream);
+
+      sw.AddIntermediate("XML");
+
+      for (int32 i = 0; i < xml.GetChildrenCount(); i++)
+      {
+        nuiXMLNode* pNode = xml.GetChild(i);
+        if (pNode->GetName() == "dict")
+        {
+          for (int j = 0; j < pNode->GetChildrenCount(); j++)
+          {
+            nuiXMLNode* pChild = pNode->GetChild(j);
+
+            if (pChild->GetName() == "key")
+            {
+              nuiXMLNode* pName = pChild->GetChild(0);
+              nglString name = pName->GetValue();
+
+              if (name == "Tracks")
+              {
+                // look for the tracks dict:
+                j++;
+                nuiXMLNode* pTracks = pNode->GetChild(j);
+
+                for (int k = 0; k < pTracks->GetChildrenCount() / 2; k++)
+                {
+                  nuiXMLNode* pKey = pTracks->GetChild(k * 2);
+                  nuiXMLNode* pTrack = pTracks->GetChild(k * 2 + 1);
+
+                  NGL_OUT("key: %s ->\n", name.GetChars());
+                }
+              }
+
+
+            }
+
+
+          }
+        }
+      }
+    }
 
     delete pStream;
     return res;
@@ -33,32 +80,6 @@ public:
   }
 
 
-  // Callbacks from the SAX parser class:
-  virtual void StartElement(const nuiXML_Char* name, const nuiXML_Char** atts)
-  {
-    //NGL_OUT("Start Element %s\n", name);
-  }
-
-  virtual void EndElement(const nuiXML_Char* name)
-  {
-    //NGL_OUT("End Element %s\n", name);
-  }
-
-  virtual void Characters(const nuiXML_Char* s, int len)
-  {
-    nglString str(s, len);
-    //NGL_OUT("Chars %s\n", str.GetChars());
-  }
-
-  virtual void ProcessingInstruction(const nuiXML_Char* target, const nuiXML_Char* data)
-  {
-    //NGL_OUT("Processing instructions %s -> %s\n", target, data);
-  }
-
-  virtual void Comment(const nuiXML_Char* data)
-  {
-    //NGL_OUT("Comment %s\n", data);
-  }
 
 protected:
   iTunesLibrary* mpLib;
