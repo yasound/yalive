@@ -21,6 +21,11 @@
 		61A9DFF40B83433800BC506C /* MainWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61A9DFF10B83433800BC506C /* MainWindow.cpp */; };
 		61A9DFF50B83433800BC506C /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61A9DFEF0B83433800BC506C /* Application.cpp */; };
 		61A9DFF60B83433800BC506C /* MainWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61A9DFF10B83433800BC506C /* MainWindow.cpp */; };
+		6EFB8E6D169C1219000A0323 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB8E6B169C1219000A0323 /* LoginViewController.m */; };
+		6EFB8E6E169C1219000A0323 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB8E6B169C1219000A0323 /* LoginViewController.m */; };
+		6EFB8E6F169C1219000A0323 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB8E6B169C1219000A0323 /* LoginViewController.m */; };
+		6EFB8E70169C1219000A0323 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB8E6B169C1219000A0323 /* LoginViewController.m */; };
+		6EFB8E8A169C150E000A0323 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFB8E89169C150E000A0323 /* WebKit.framework */; };
 		BCBCB15F0DFD45BD002E8BC3 /* libnui3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBCB15E0DFD45B6002E8BC3 /* libnui3.a */; };
 		E59CD16A11EA0C4000955611 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59CD16911EA0C4000955611 /* Cocoa.framework */; };
 		E5C59110167223B800BAEDE4 /* Deck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5C5910E167223B800BAEDE4 /* Deck.cpp */; };
@@ -171,6 +176,9 @@
 		61A9DFF00B83433800BC506C /* Application.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Application.h; path = src/Application.h; sourceTree = "<group>"; };
 		61A9DFF10B83433800BC506C /* MainWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = MainWindow.cpp; path = src/MainWindow.cpp; sourceTree = "<group>"; };
 		61A9DFF20B83433800BC506C /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MainWindow.h; path = src/MainWindow.h; sourceTree = "<group>"; };
+		6EFB8E6A169C1219000A0323 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = src/LoginViewController.h; sourceTree = "<group>"; };
+		6EFB8E6B169C1219000A0323 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = src/LoginViewController.m; sourceTree = "<group>"; };
+		6EFB8E89169C150E000A0323 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		BCBCB1520DFD45B5002E8BC3 /* nui3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = nui3.xcodeproj; path = ../nui3/nui3.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E59CD16911EA0C4000955611 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E59CD30011EA94A000955611 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
@@ -229,6 +237,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EFB8E8A169C150E000A0323 /* WebKit.framework in Frameworks */,
 				E5EF6FC011E77DE8000FB337 /* CoreFoundation.framework in Frameworks */,
 				E5EF6FC111E77DE8000FB337 /* CoreServices.framework in Frameworks */,
 				E5EF6FC311E77DE8000FB337 /* OpenGL.framework in Frameworks */,
@@ -243,6 +252,7 @@
 		61A9DE3D0B833C9200BC506C = {
 			isa = PBXGroup;
 			children = (
+				6EFB8E89169C150E000A0323 /* WebKit.framework */,
 				E5C5912216722BA500BAEDE4 /* resources */,
 				E5C5910A1672188500BAEDE4 /* YaLiveCocoa.entitlements */,
 				61A9DE4A0B833CD000BC506C /* sources */,
@@ -279,6 +289,8 @@
 				E5C5912A1672405500BAEDE4 /* iTunesLibrary.h */,
 				E5C5912F1672407400BAEDE4 /* SongDB.cpp */,
 				E5C591301672407400BAEDE4 /* SongDB.h */,
+				6EFB8E6A169C1219000A0323 /* LoginViewController.h */,
+				6EFB8E6B169C1219000A0323 /* LoginViewController.m */,
 			);
 			name = sources;
 			sourceTree = "<group>";
@@ -581,6 +593,7 @@
 				E5C59110167223B800BAEDE4 /* Deck.cpp in Sources */,
 				E5C5912B1672405500BAEDE4 /* iTunesLibrary.cpp in Sources */,
 				E5C591311672407400BAEDE4 /* SongDB.cpp in Sources */,
+				6EFB8E6D169C1219000A0323 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +606,7 @@
 				E5C59111167223B800BAEDE4 /* Deck.cpp in Sources */,
 				E5C5912C1672405500BAEDE4 /* iTunesLibrary.cpp in Sources */,
 				E5C591321672407400BAEDE4 /* SongDB.cpp in Sources */,
+				6EFB8E6E169C1219000A0323 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +619,7 @@
 				E5C59113167223B800BAEDE4 /* Deck.cpp in Sources */,
 				E5C5912E1672405500BAEDE4 /* iTunesLibrary.cpp in Sources */,
 				E5C591341672407400BAEDE4 /* SongDB.cpp in Sources */,
+				6EFB8E70169C1219000A0323 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +632,7 @@
 				E5C59112167223B800BAEDE4 /* Deck.cpp in Sources */,
 				E5C5912D1672405500BAEDE4 /* iTunesLibrary.cpp in Sources */,
 				E5C591331672407400BAEDE4 /* SongDB.cpp in Sources */,
+				6EFB8E6F169C1219000A0323 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,7 +681,7 @@
 		61A9DFC30B833E9600BC506C /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CODE_SIGN_ENTITLEMENTS = YaLiveCocoa.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -691,6 +707,7 @@
 		61A9DFCD0B833EF300BC506C /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CODE_SIGN_ENTITLEMENTS = YaLiveCocoa.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -750,9 +767,11 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_DEBUGGING_SYMBOLS = full;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (

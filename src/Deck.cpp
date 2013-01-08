@@ -7,6 +7,12 @@
 //
 
 #include "Deck.h"
+#include "LoginViewController.h"
+
+#include "nui.h"
+#include "nglKernel.h"
+#include "nglContext.h"
+
 
 Deck::Deck(nuiWidget* pDeck)
 : mSink(this)
@@ -39,5 +45,23 @@ void Deck::OnPlayPause(const nuiEvent& rEvent)
 
 void Deck::OnChooseSong(const nuiEvent& rEvent)
 {
-  NGL_OUT("Choose Song");
+  NGL_OUT("Choose Song\n");
+
+//  NSWindow* window = [[NSWindow alloc]
+//                      initWithContentRect: NSMakeRect(0, 0, 640, 480)
+//                      styleMask: NSTitledWindowMask | NSMiniaturizableWindowMask
+//                      backing: NSBackingStoreBuffered
+//                      defer: NO];
+//  [window setTitle: @"New Window"];
+//
+  LoginViewController* login = [[LoginViewController alloc] init];
+//
+//  NSWindow* window = [[NSWindow alloc]
+//                      initWithContentRect: NSMakeRect(0, 0, 640, 480)
+//                      styleMask: NSTitledWindowMask | NSMiniaturizableWindowMask
+//                      backing: NSBackingStoreBuffered
+//                      defer: NO];
+//  [window setTitle: @"New Window"];
+//  [window center];
+//  [window makeKeyAndOrderFront:nil];
 }

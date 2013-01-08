@@ -42,7 +42,7 @@ MainWindow::MainWindow(const nglContextInfo& rContextInfo, const nglWindowInfo& 
 
   // Load iTunes DB:
   iTunesLibrary lib;
-  bool res = lib.LoadFromXMLFile("/Users/meeloo/Music/iTunes/iTunes Music Library.xml");
+  bool res = lib.LoadFromXMLFile("/Users/jeromeblondon/Music/iTunes/iTunes Music Library.xml");
 
   if (!res)
   {
