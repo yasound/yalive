@@ -19,4 +19,5 @@
 - (void)webView:(WebView *)sender runJavaScriptAlertPanelWithMessage:(NSString *)message;
 
 -(void)loginCompleted:(NSString*)sessionId;
+-(void)logout;
 @end

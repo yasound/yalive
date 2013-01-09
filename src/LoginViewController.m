@@ -17,8 +17,10 @@
 - (id) init
 {
   self = [super init];
+  
+  [self logout];
   mpWindow = [[NSWindow alloc]
-                      initWithContentRect: NSMakeRect(0, 0, 1024, 650)
+                      initWithContentRect: NSMakeRect(0, 0, 640, 650)
                       styleMask: NSTitledWindowMask | NSClosableWindowMask
                       backing: NSBackingStoreBuffered
                       defer: NO];
@@ -26,7 +28,7 @@
   [mpWindow center];
   [mpWindow makeKeyAndOrderFront:nil];
   
-  mpWebView = [[WebView alloc] initWithFrame:NSMakeRect(0, 0, 1024, 650)];
+  mpWebView = [[WebView alloc] initWithFrame:NSMakeRect(0, 0, 640, 650)];
   
   NSView *superview = [mpWindow contentView];
   [superview addSubview:mpWebView];
@@ -126,6 +128,16 @@
 {
   NSLog(@"sessionid = %@", sessionId);
   [mpWindow performClose:self];
+}
+
+-(void)logout
+{
+  NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+  for (NSHTTPCookie *cookie in [cookieJar cookiesForURL:[NSURL URLWithString:@"http://localhost:8000"]])
+  {
+    [cookieJar deleteCookie:cookie];
+  }
+  
 }
 
 
