@@ -12,6 +12,7 @@
 #include "nui.h"
 #include "nglKernel.h"
 #include "nglContext.h"
+#include "Communicator.h"
 
 
 Deck::Deck(nuiWidget* pDeck)
@@ -47,21 +48,12 @@ void Deck::OnChooseSong(const nuiEvent& rEvent)
 {
   NGL_OUT("Choose Song\n");
 
-//  NSWindow* window = [[NSWindow alloc]
-//                      initWithContentRect: NSMakeRect(0, 0, 640, 480)
-//                      styleMask: NSTitledWindowMask | NSMiniaturizableWindowMask
-//                      backing: NSBackingStoreBuffered
-//                      defer: NO];
-//  [window setTitle: @"New Window"];
-//
-  LoginViewController* login = [[LoginViewController alloc] init];
-//
-//  NSWindow* window = [[NSWindow alloc]
-//                      initWithContentRect: NSMakeRect(0, 0, 640, 480)
-//                      styleMask: NSTitledWindowMask | NSMiniaturizableWindowMask
-//                      backing: NSBackingStoreBuffered
-//                      defer: NO];
-//  [window setTitle: @"New Window"];
-//  [window center];
-//  [window makeKeyAndOrderFront:nil];
+  LoginViewController* login = [[LoginViewController alloc] initWithCB:this];
+}
+
+void Deck::OnLoginReceived(const nglString& sessionId)
+{
+  NGL_OUT("Login received: %s", sessionId.GetChars());
+  Communicator com = Communicator(sessionId);
+  com.GetRadios();
 }

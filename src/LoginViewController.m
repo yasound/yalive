@@ -7,16 +7,16 @@
 //
 
 #import "LoginViewController.h"
-
 @interface LoginViewController ()
 
 @end
 
 @implementation LoginViewController
 
-- (id) init
+- (id) initWithCB:(Deck *)cb
 {
   self = [super init];
+  mpCB = cb;
   
   [self logout];
   mpWindow = [[NSWindow alloc]
@@ -128,6 +128,7 @@
 {
   NSLog(@"sessionid = %@", sessionId);
   [mpWindow performClose:self];
+  mpCB->OnLoginReceived([sessionId cStringUsingEncoding:NSASCIIStringEncoding]);
 }
 
 -(void)logout

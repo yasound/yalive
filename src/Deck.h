@@ -26,5 +26,8 @@ protected:
   void OnPlayPause(const nuiEvent& rEvent);
   void OnChooseSong(const nuiEvent& rEvent);
 
+public:
+  void OnLoginReceived(const nglString& sessionId);
+  
   nuiEventSink<Deck> mSink;
 };

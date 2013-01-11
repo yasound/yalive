@@ -21,6 +21,10 @@
 		61A9DFF40B83433800BC506C /* MainWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61A9DFF10B83433800BC506C /* MainWindow.cpp */; };
 		61A9DFF50B83433800BC506C /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61A9DFEF0B83433800BC506C /* Application.cpp */; };
 		61A9DFF60B83433800BC506C /* MainWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61A9DFF10B83433800BC506C /* MainWindow.cpp */; };
+		6E8226A7169FE06A003E1841 /* Communicator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E8226A5169FE06A003E1841 /* Communicator.cpp */; };
+		6E8226A8169FE06A003E1841 /* Communicator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E8226A5169FE06A003E1841 /* Communicator.cpp */; };
+		6E8226A9169FE06A003E1841 /* Communicator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E8226A5169FE06A003E1841 /* Communicator.cpp */; };
+		6E8226AA169FE06A003E1841 /* Communicator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E8226A5169FE06A003E1841 /* Communicator.cpp */; };
 		6EFB8E6D169C1219000A0323 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB8E6B169C1219000A0323 /* LoginViewController.m */; };
 		6EFB8E6E169C1219000A0323 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB8E6B169C1219000A0323 /* LoginViewController.m */; };
 		6EFB8E6F169C1219000A0323 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB8E6B169C1219000A0323 /* LoginViewController.m */; };
@@ -176,6 +180,8 @@
 		61A9DFF00B83433800BC506C /* Application.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Application.h; path = src/Application.h; sourceTree = "<group>"; };
 		61A9DFF10B83433800BC506C /* MainWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = MainWindow.cpp; path = src/MainWindow.cpp; sourceTree = "<group>"; };
 		61A9DFF20B83433800BC506C /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MainWindow.h; path = src/MainWindow.h; sourceTree = "<group>"; };
+		6E8226A5169FE06A003E1841 /* Communicator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Communicator.cpp; path = src/Communicator.cpp; sourceTree = "<group>"; };
+		6E8226A6169FE06A003E1841 /* Communicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Communicator.h; path = src/Communicator.h; sourceTree = "<group>"; };
 		6EFB8E6A169C1219000A0323 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = src/LoginViewController.h; sourceTree = "<group>"; };
 		6EFB8E6B169C1219000A0323 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = src/LoginViewController.m; sourceTree = "<group>"; };
 		6EFB8E89169C150E000A0323 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -285,6 +291,8 @@
 				61A9DFF20B83433800BC506C /* MainWindow.h */,
 				E5C5910E167223B800BAEDE4 /* Deck.cpp */,
 				E5C5910F167223B800BAEDE4 /* Deck.h */,
+				6E8226A5169FE06A003E1841 /* Communicator.cpp */,
+				6E8226A6169FE06A003E1841 /* Communicator.h */,
 				E5C591291672405500BAEDE4 /* iTunesLibrary.cpp */,
 				E5C5912A1672405500BAEDE4 /* iTunesLibrary.h */,
 				E5C5912F1672407400BAEDE4 /* SongDB.cpp */,
@@ -594,6 +602,7 @@
 				E5C5912B1672405500BAEDE4 /* iTunesLibrary.cpp in Sources */,
 				E5C591311672407400BAEDE4 /* SongDB.cpp in Sources */,
 				6EFB8E6D169C1219000A0323 /* LoginViewController.m in Sources */,
+				6E8226A7169FE06A003E1841 /* Communicator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +616,7 @@
 				E5C5912C1672405500BAEDE4 /* iTunesLibrary.cpp in Sources */,
 				E5C591321672407400BAEDE4 /* SongDB.cpp in Sources */,
 				6EFB8E6E169C1219000A0323 /* LoginViewController.m in Sources */,
+				6E8226A8169FE06A003E1841 /* Communicator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,6 +630,7 @@
 				E5C5912E1672405500BAEDE4 /* iTunesLibrary.cpp in Sources */,
 				E5C591341672407400BAEDE4 /* SongDB.cpp in Sources */,
 				6EFB8E70169C1219000A0323 /* LoginViewController.m in Sources */,
+				6E8226AA169FE06A003E1841 /* Communicator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +644,7 @@
 				E5C5912D1672405500BAEDE4 /* iTunesLibrary.cpp in Sources */,
 				E5C591331672407400BAEDE4 /* SongDB.cpp in Sources */,
 				6EFB8E6F169C1219000A0323 /* LoginViewController.m in Sources */,
+				6E8226A9169FE06A003E1841 /* Communicator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
