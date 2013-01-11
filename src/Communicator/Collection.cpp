@@ -33,7 +33,7 @@ void Models::Collection::Fetch(const CollectionResponseDelegate& rDelegate, int 
 {
   mDelegate = rDelegate;
   Communicator communicator(mSessionId);
-  nuiHTTPRequest *pRequest = communicator.BuildGetRequest(mApi, mAuth);
+  nuiHTTPRequest *pRequest = communicator.BuildGetObjectsRequest(mApi, mAuth, offset, limit);
   pRequest->SendRequest(nuiMakeDelegate(this, &Models::Collection::HandleResponse));
 }
 

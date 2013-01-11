@@ -25,12 +25,12 @@ namespace Models {
     void Fetch(const CollectionResponseDelegate& rDelegate, int offset=0, int limit=25);
     
   protected:
-    virtual void ParseJson(nuiJson::Value &root);
     virtual Object* ParseObject(nuiJson::Value &object) = 0;
     
   private:
     void HandleResponse(nuiHTTPRequest* pRequest, nuiHTTPResponse* pResponse);
-
+    
+    void ParseJson(nuiJson::Value &root);
     void ParseHeader(nuiJson::Value &object);
     void ParseObjects(nuiJson::Value &array);
     
@@ -50,7 +50,8 @@ namespace Models {
       nglString mPrevious;
     };
     Header mHeader;
-    
+  
+  public:
     std::vector<Object*> mObjects;
     
   };

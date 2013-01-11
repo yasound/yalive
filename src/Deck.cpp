@@ -14,6 +14,7 @@
 #include "nglContext.h"
 #include "Communicator.h"
 #include "MyRadios.h"
+#include "Radio.h"
 
 
 Deck::Deck(nuiWidget* pDeck)
@@ -62,6 +63,17 @@ void Deck::OnLoginReceived(const nglString& sessionId)
 
 void Deck::OnRadiosReceived(Models::Collection *pCollection)
 {
+  std::vector<Models::Object*>::iterator it = pCollection->mObjects.begin();
+  std::vector<Models::Object*>::iterator end = pCollection->mObjects.end();
+  
+  while (it != end)
+  {
+    Models::Radio* pRadio = (Models::Radio *)*it;
+    NGL_OUT("%s\n", pRadio->GetName().GetChars());
+    ++it;
+  }
+  
+  
   NGL_OUT("Yes!!!\n");
   delete pCollection;
 }

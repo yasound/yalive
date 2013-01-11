@@ -14,14 +14,14 @@
 class Communicator
 {
 public:
-  typedef nuiFastDelegate1<nuiJson::Value> CommunicatorResponseDelegate;
-
   Communicator(const nglString& sessionId);
   virtual ~Communicator();
   
 public:
-  nuiHTTPRequest* BuildGetRequest(const nglString& api, bool auth=true);
+  nuiHTTPRequest* BuildGetObjectRequest(const nglString& api, bool auth=true);
+  nuiHTTPRequest* BuildGetObjectsRequest(const nglString& api, bool auth=true, int offset=0, int limit=25);
   nglString GetApiUrl(const nglString& api);
+  nglString GetApiUrl(const nglString& api, int offset, int limit);
   
   
 private:
