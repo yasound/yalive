@@ -13,6 +13,7 @@
 #include "nglKernel.h"
 #include "nglContext.h"
 #include "Communicator.h"
+#include "MyRadios.h"
 
 
 Deck::Deck(nuiWidget* pDeck)
@@ -54,11 +55,13 @@ void Deck::OnChooseSong(const nuiEvent& rEvent)
 void Deck::OnLoginReceived(const nglString& sessionId)
 {
   NGL_OUT("Login received: %s", sessionId.GetChars());
-  Communicator com = Communicator(sessionId);
-  com.GetRadios(nuiMakeDelegate(this, &Deck::OnRadiosReceived));
+  
+  Models::MyRadios *pRadios = new Models::MyRadios(sessionId);
+  pRadios->Fetch(nuiMakeDelegate(this, &Deck::OnRadiosReceived));
 }
 
-void Deck::OnRadiosReceived(nuiJson::Value root)
+void Deck::OnRadiosReceived(Models::Collection *pCollection)
 {
   NGL_OUT("Yes!!!\n");
+  delete pCollection;
 }

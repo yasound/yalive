@@ -10,6 +10,7 @@
 
 #include "nui.h"
 #include "nuiJson.h"
+#include "Collection.h"
 
 class Deck
 {
@@ -29,7 +30,7 @@ protected:
 
 public:
   void OnLoginReceived(const nglString& sessionId);
-  void OnRadiosReceived(nuiJson::Value root);
+  void OnRadiosReceived(Models::Collection* pCollection);
   
   nuiEventSink<Deck> mSink;
 };

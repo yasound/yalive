@@ -18,10 +18,8 @@ public:
 
   Communicator(const nglString& sessionId);
   virtual ~Communicator();
-
-  void GetRadios(const CommunicatorResponseDelegate& rDelegate);
   
-private:
+public:
   nuiHTTPRequest* BuildGetRequest(const nglString& api, bool auth=true);
   nglString GetApiUrl(const nglString& api);
   
@@ -30,21 +28,4 @@ private:
   nglString mSessionId;
   nglString mBaseUrl;
   
-};
-
-class Communicator_Handler
-{
-public:
-  Communicator_Handler(const Communicator::CommunicatorResponseDelegate &rDelegate, nuiHTTPRequest *pRequest);
-  virtual ~Communicator_Handler();
-  
-  void SendRequest();
-  
-private:
-  void HandleResponse(nuiHTTPRequest* pRequest, nuiHTTPResponse* pResponse);
-
-private:
-  Communicator::CommunicatorResponseDelegate mDelegate;
-  nuiHTTPRequest *mpRequest;
-  nuiHTTPRequest_Thread* mpThread;
 };
