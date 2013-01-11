@@ -9,6 +9,7 @@
 #pragma once
 
 #include "nui.h"
+#include "nuiJson.h"
 
 class Deck
 {
@@ -28,6 +29,7 @@ protected:
 
 public:
   void OnLoginReceived(const nglString& sessionId);
+  void OnRadiosReceived(nuiJson::Value root);
   
   nuiEventSink<Deck> mSink;
 };

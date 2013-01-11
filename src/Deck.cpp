@@ -55,5 +55,10 @@ void Deck::OnLoginReceived(const nglString& sessionId)
 {
   NGL_OUT("Login received: %s", sessionId.GetChars());
   Communicator com = Communicator(sessionId);
-  com.GetRadios();
+  com.GetRadios(nuiMakeDelegate(this, &Deck::OnRadiosReceived));
+}
+
+void Deck::OnRadiosReceived(nuiJson::Value root)
+{
+  NGL_OUT("Yes!!!\n");
 }
