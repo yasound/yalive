@@ -12,9 +12,9 @@
 #include "nui.h"
 #include "nglKernel.h"
 #include "nglContext.h"
-#include "Communicator.h"
 #include "MyRadios.h"
 #include "Radio.h"
+#include "RequestBuilder.h"
 
 
 Deck::Deck(nuiWidget* pDeck)
@@ -56,7 +56,9 @@ void Deck::OnChooseSong(const nuiEvent& rEvent)
 void Deck::OnLoginReceived(const nglString& sessionId)
 {
   NGL_OUT("Login received: %s", sessionId.GetChars());
-  
+
+  Models::RequestBuilder::Instance()->SetSessionId(sessionId);
+
   Models::MyRadios *pRadios = new Models::MyRadios(sessionId);
   pRadios->Fetch(nuiMakeDelegate(this, &Deck::OnRadiosReceived));
 }

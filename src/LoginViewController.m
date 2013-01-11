@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import "RequestBuilder.h"
+
 @interface LoginViewController ()
 
 @end
@@ -126,7 +128,6 @@
 // implements console.loginCompleted(sessionid)
 -(void)loginCompleted:(NSString*)sessionId
 {
-  NSLog(@"sessionid = %@", sessionId);
   [mpWindow performClose:self];
   mpCB->OnLoginReceived([sessionId cStringUsingEncoding:NSASCIIStringEncoding]);
 }

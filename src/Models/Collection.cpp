@@ -7,7 +7,7 @@
 //
 
 #include "Collection.h"
-#include "Communicator.h"
+#include "RequestBuilder.h"
 
 Models::Collection::Collection(const nglString& sessionId)
 :mSessionId(sessionId)
@@ -32,8 +32,8 @@ Models::Collection::~Collection()
 void Models::Collection::Fetch(const CollectionResponseDelegate& rDelegate, int offset, int limit)
 {
   mDelegate = rDelegate;
-  Communicator communicator(mSessionId);
-  nuiHTTPRequest *pRequest = communicator.BuildGetObjectsRequest(mApi, mAuth, offset, limit);
+  
+  nuiHTTPRequest *pRequest = RequestBuilder::Instance()->BuildGetObjectsRequest(mApi, mAuth, offset, limit);
   pRequest->SendRequest(nuiMakeDelegate(this, &Models::Collection::HandleResponse));
 }
 
