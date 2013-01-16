@@ -206,6 +206,7 @@
 		6E40565F16A0714C00EBCE90 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
 		6E40566016A0714C00EBCE90 /* Radio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Radio.cpp; sourceTree = "<group>"; };
 		6E40566116A0714C00EBCE90 /* Radio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Radio.h; sourceTree = "<group>"; };
+		6E633E0516A6FC45006921AC /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		6EFB8E6A169C1219000A0323 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = src/LoginViewController.h; sourceTree = "<group>"; };
 		6EFB8E6B169C1219000A0323 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = src/LoginViewController.m; sourceTree = "<group>"; };
 		6EFB8E89169C150E000A0323 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -312,6 +313,7 @@
 				E59CD30011EA94A000955611 /* Info.plist */,
 				61A9DFEF0B83433800BC506C /* Application.cpp */,
 				61A9DFF00B83433800BC506C /* Application.h */,
+				6E633E0516A6FC45006921AC /* Settings.h */,
 				61A9DFF10B83433800BC506C /* MainWindow.cpp */,
 				61A9DFF20B83433800BC506C /* MainWindow.h */,
 				E5C5910E167223B800BAEDE4 /* Deck.cpp */,
@@ -759,6 +761,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = YaLive;
@@ -815,6 +818,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = _COCOA_;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = YaLiveCocoa;

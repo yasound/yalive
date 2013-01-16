@@ -5,6 +5,7 @@
 //  Created by Jérôme BLONDON on 11/01/13.
 //
 //
+#include "Settings.h"
 #include "RequestBuilder.h"
 
 /*
@@ -27,7 +28,7 @@ Models::RequestBuilder* Models::RequestBuilder::Instance()
  */
 
 Models::RequestBuilder::RequestBuilder()
-:mBaseUrl("http://localhost:8000")
+:mBaseUrl(YASOUND_SERVER)
 {
 }
 

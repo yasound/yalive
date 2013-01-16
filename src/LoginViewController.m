@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "Settings.h"
 #import "RequestBuilder.h"
 
 @interface LoginViewController ()
@@ -38,9 +39,11 @@
   [mpWebView setUIDelegate: self];
   [mpWebView setResourceLoadDelegate: self];
   
-  NSString *urlString = @"http://localhost:8000/fr/live/login/";
+  
+  NSString *urlString = [[NSString alloc] initWithFormat:@"%s/live/login/", YASOUND_SERVER];
   [[mpWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
-
+  
+  [urlString release];
   [self windowDidLoad];
   return self;
 }
