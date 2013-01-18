@@ -49,6 +49,32 @@
 		E5B95DD616A981EA00D626C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B95DCB16A981EA00D626C8 /* UIKit.framework */; };
 		E5B95E0516A985D300D626C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B95E0416A985D300D626C8 /* Foundation.framework */; };
 		E5B95E0D16A988F700D626C8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B95E0C16A988F700D626C8 /* QuartzCore.framework */; };
+		E5B95E1316A9983E00D626C8 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61A9DFEF0B83433800BC506C /* Application.cpp */; };
+		E5B95E1416A9983E00D626C8 /* Application.h in Sources */ = {isa = PBXBuildFile; fileRef = 61A9DFF00B83433800BC506C /* Application.h */; };
+		E5B95E1516A9983E00D626C8 /* MainWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61A9DFF10B83433800BC506C /* MainWindow.cpp */; };
+		E5B95E1616A9983E00D626C8 /* MainWindow.h in Sources */ = {isa = PBXBuildFile; fileRef = 61A9DFF20B83433800BC506C /* MainWindow.h */; };
+		E5B95E1716A9983E00D626C8 /* Deck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5C5910E167223B800BAEDE4 /* Deck.cpp */; };
+		E5B95E1816A9983E00D626C8 /* Deck.h in Sources */ = {isa = PBXBuildFile; fileRef = E5C5910F167223B800BAEDE4 /* Deck.h */; };
+		E5B95E1916A9983E00D626C8 /* iTunesLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5C591291672405500BAEDE4 /* iTunesLibrary.cpp */; };
+		E5B95E1A16A9983E00D626C8 /* iTunesLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = E5C5912A1672405500BAEDE4 /* iTunesLibrary.h */; };
+		E5B95E1B16A9983E00D626C8 /* SongDB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5C5912F1672407400BAEDE4 /* SongDB.cpp */; };
+		E5B95E1C16A9983E00D626C8 /* SongDB.h in Sources */ = {isa = PBXBuildFile; fileRef = E5C591301672407400BAEDE4 /* SongDB.h */; };
+		E5B95E1E16A9983E00D626C8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B95E0C16A988F700D626C8 /* QuartzCore.framework */; };
+		E5B95E1F16A9983E00D626C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B95E0416A985D300D626C8 /* Foundation.framework */; };
+		E5B95E2016A9983E00D626C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B95DCB16A981EA00D626C8 /* UIKit.framework */; };
+		E5B95E2116A9983E00D626C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B95DC816A981EA00D626C8 /* CoreGraphics.framework */; };
+		E5B95E2216A9983E00D626C8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B95DC916A981EA00D626C8 /* OpenGLES.framework */; };
+		E5B95E2316A9983E00D626C8 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B95DC116A981EA00D626C8 /* Accelerate.framework */; };
+		E5B95E2416A9983E00D626C8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B95DC216A981EA00D626C8 /* AudioToolbox.framework */; };
+		E5B95E2516A9983E00D626C8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B95DC516A981EA00D626C8 /* CFNetwork.framework */; };
+		E5B95E2616A9983E00D626C8 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B95DC616A981EA00D626C8 /* CoreAudio.framework */; };
+		E5B95E2716A9983E00D626C8 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B95DC716A981EA00D626C8 /* CoreFoundation.framework */; };
+		E5B95E2816A9983E00D626C8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B95DCA16A981EA00D626C8 /* StoreKit.framework */; };
+		E5B95E2916A9983E00D626C8 /* libnuiPhoneD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A630D511CA7CCD00446489 /* libnuiPhoneD.a */; };
+		E5B95E2B16A9983E00D626C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5B95DA316A97EDB00D626C8 /* InfoPlist.strings */; };
+		E5B95E2C16A9983E00D626C8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B95DAC16A97EDB00D626C8 /* Default.png */; };
+		E5B95E2D16A9983E00D626C8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B95DAE16A97EDB00D626C8 /* Default@2x.png */; };
+		E5B95E2E16A9983E00D626C8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B95DB016A97EDB00D626C8 /* Default-568h@2x.png */; };
 		E5C59110167223B800BAEDE4 /* Deck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5C5910E167223B800BAEDE4 /* Deck.cpp */; };
 		E5C59111167223B800BAEDE4 /* Deck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5C5910E167223B800BAEDE4 /* Deck.cpp */; };
 		E5C59112167223B800BAEDE4 /* Deck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5C5910E167223B800BAEDE4 /* Deck.cpp */; };
@@ -148,6 +174,13 @@
 			remoteGlobalIDString = E52412CD11CB860B0025CA71;
 			remoteInfo = nuiPhoneD;
 		};
+		E5B95E1116A9983E00D626C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCBCB1520DFD45B5002E8BC3 /* nui3.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E52412CD11CB860B0025CA71;
+			remoteInfo = nuiPhoneD;
+		};
 		E5D4E8E512E4A9000001A86F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BCBCB1520DFD45B5002E8BC3 /* nui3.xcodeproj */;
@@ -208,7 +241,7 @@
 		E59CD16911EA0C4000955611 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E59CD30011EA94A000955611 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		E5B95D9216A97E5C00D626C8 /* YaLiveCocoaD copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "YaLiveCocoaD copy-Info.plist"; path = "/Users/meeloo/work/yalive/YaLiveCocoaD copy-Info.plist"; sourceTree = "<absolute>"; };
-		E5B95D9716A97EDB00D626C8 /* YaLiveD iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YaLiveD iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5B95D9716A97EDB00D626C8 /* YaLiveD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaLiveD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B95D9A16A97EDB00D626C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E5B95D9C16A97EDB00D626C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E5B95D9E16A97EDB00D626C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
@@ -231,6 +264,8 @@
 		E5B95DCB16A981EA00D626C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E5B95E0416A985D300D626C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E5B95E0C16A988F700D626C8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		E5B95E3216A9983E00D626C8 /* YaLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5B95E3416A9983E00D626C8 /* YaLiveD iOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "YaLiveD iOS copy-Info.plist"; path = "/Users/meeloo/work/yalive/YaLiveD iOS copy-Info.plist"; sourceTree = "<absolute>"; };
 		E5C5910A1672188500BAEDE4 /* YaLiveCocoa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = YaLiveCocoa.entitlements; sourceTree = "<group>"; };
 		E5C5910E167223B800BAEDE4 /* Deck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Deck.cpp; path = src/Deck.cpp; sourceTree = "<group>"; };
 		E5C5910F167223B800BAEDE4 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = src/Deck.h; sourceTree = "<group>"; };
@@ -289,6 +324,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5B95E1D16A9983E00D626C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B95E1E16A9983E00D626C8 /* QuartzCore.framework in Frameworks */,
+				E5B95E1F16A9983E00D626C8 /* Foundation.framework in Frameworks */,
+				E5B95E2016A9983E00D626C8 /* UIKit.framework in Frameworks */,
+				E5B95E2116A9983E00D626C8 /* CoreGraphics.framework in Frameworks */,
+				E5B95E2216A9983E00D626C8 /* OpenGLES.framework in Frameworks */,
+				E5B95E2316A9983E00D626C8 /* Accelerate.framework in Frameworks */,
+				E5B95E2416A9983E00D626C8 /* AudioToolbox.framework in Frameworks */,
+				E5B95E2516A9983E00D626C8 /* CFNetwork.framework in Frameworks */,
+				E5B95E2616A9983E00D626C8 /* CoreAudio.framework in Frameworks */,
+				E5B95E2716A9983E00D626C8 /* CoreFoundation.framework in Frameworks */,
+				E5B95E2816A9983E00D626C8 /* StoreKit.framework in Frameworks */,
+				E5B95E2916A9983E00D626C8 /* libnuiPhoneD.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5D64527120A0B92009C26A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -327,6 +381,7 @@
 				E5B95D9916A97EDB00D626C8 /* Frameworks */,
 				61A9DFB50B833DE500BC506C /* Products */,
 				E5B95D9216A97E5C00D626C8 /* YaLiveCocoaD copy-Info.plist */,
+				E5B95E3416A9983E00D626C8 /* YaLiveD iOS copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -383,7 +438,8 @@
 				61A9DFC90B833EF200BC506C /* YaLiveD.app */,
 				E5EF6FC811E77DE8000FB337 /* YaLiveCocoaD.app */,
 				E5D64530120A0B92009C26A9 /* YaLiveCocoa.app */,
-				E5B95D9716A97EDB00D626C8 /* YaLiveD iOS.app */,
+				E5B95D9716A97EDB00D626C8 /* YaLiveD.app */,
+				E5B95E3216A9983E00D626C8 /* YaLive.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -492,7 +548,26 @@
 			);
 			name = "YaLiveD iOS";
 			productName = "YaLiveD iOS";
-			productReference = E5B95D9716A97EDB00D626C8 /* YaLiveD iOS.app */;
+			productReference = E5B95D9716A97EDB00D626C8 /* YaLiveD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E5B95E0F16A9983E00D626C8 /* YaLive iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5B95E3016A9983E00D626C8 /* Build configuration list for PBXNativeTarget "YaLive iOS" */;
+			buildPhases = (
+				E5B95E1216A9983E00D626C8 /* Sources */,
+				E5B95E1D16A9983E00D626C8 /* Frameworks */,
+				E5B95E2A16A9983E00D626C8 /* Resources */,
+				E5B95E2F16A9983E00D626C8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5B95E1016A9983E00D626C8 /* PBXTargetDependency */,
+			);
+			name = "YaLive iOS";
+			productName = "YaLiveD iOS";
+			productReference = E5B95E3216A9983E00D626C8 /* YaLive.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E5D64521120A0B92009C26A9 /* YaLiveCocoa */ = {
@@ -562,6 +637,7 @@
 				E5EF6FB811E77DE8000FB337 /* YaLiveCocoaD */,
 				E5D64521120A0B92009C26A9 /* YaLiveCocoa */,
 				E5B95D9616A97EDB00D626C8 /* YaLiveD iOS */,
+				E5B95E0F16A9983E00D626C8 /* YaLive iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -665,6 +741,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5B95E2A16A9983E00D626C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B95E2B16A9983E00D626C8 /* InfoPlist.strings in Resources */,
+				E5B95E2C16A9983E00D626C8 /* Default.png in Resources */,
+				E5B95E2D16A9983E00D626C8 /* Default@2x.png in Resources */,
+				E5B95E2E16A9983E00D626C8 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -697,6 +784,19 @@
 			shellScript = "rsync -rC ./resources/ --exclude \".*\" \"$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH\"\n../nui3/tools/make_rc.py resources resource.rc\necho 0 ICON \\\"resources/icon.ico\\\" >> resource.rc\n";
 		};
 		E5B95E0E16A9895200D626C8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rsync -rC ./resources/ --exclude \".*\" \"$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH\"\n../nui3/tools/make_rc.py resources resource.rc\necho 0 ICON \\\"resources/icon.ico\\\" >> resource.rc\n";
+		};
+		E5B95E2F16A9983E00D626C8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -781,6 +881,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5B95E1216A9983E00D626C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B95E1316A9983E00D626C8 /* Application.cpp in Sources */,
+				E5B95E1416A9983E00D626C8 /* Application.h in Sources */,
+				E5B95E1516A9983E00D626C8 /* MainWindow.cpp in Sources */,
+				E5B95E1616A9983E00D626C8 /* MainWindow.h in Sources */,
+				E5B95E1716A9983E00D626C8 /* Deck.cpp in Sources */,
+				E5B95E1816A9983E00D626C8 /* Deck.h in Sources */,
+				E5B95E1916A9983E00D626C8 /* iTunesLibrary.cpp in Sources */,
+				E5B95E1A16A9983E00D626C8 /* iTunesLibrary.h in Sources */,
+				E5B95E1B16A9983E00D626C8 /* SongDB.cpp in Sources */,
+				E5B95E1C16A9983E00D626C8 /* SongDB.h in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5D64524120A0B92009C26A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -822,6 +939,11 @@
 			isa = PBXTargetDependency;
 			name = nuiPhoneD;
 			targetProxy = E5B95DB416A97F0D00D626C8 /* PBXContainerItemProxy */;
+		};
+		E5B95E1016A9983E00D626C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = nuiPhoneD;
+			targetProxy = E5B95E1116A9983E00D626C8 /* PBXContainerItemProxy */;
 		};
 		E5D64535120A0BA3009C26A9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -938,7 +1060,32 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "YaLiveD iOS/YaLiveD iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = YaLiveD;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		E5B95E3116A9983E00D626C8 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YaLiveD iOS/YaLiveD iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = NUI_IPHONE;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "YaLiveD iOS copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = YaLive;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -1035,6 +1182,14 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5B95DB316A97EDB00D626C8 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		E5B95E3016A9983E00D626C8 /* Build configuration list for PBXNativeTarget "YaLive iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5B95E3116A9983E00D626C8 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Default;

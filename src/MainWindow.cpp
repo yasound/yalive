@@ -23,6 +23,7 @@ MainWindow::MainWindow(const nglContextInfo& rContextInfo, const nglWindowInfo& 
 {
   //mClearBackground = false;
   SetDebugMode(true);
+  EnableAutoRotation(true);
 
   LoadCSS(_T("rsrc:/css/main.css"));
 
