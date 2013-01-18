@@ -7,22 +7,27 @@
 		<key>YaLive.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>YaLiveCocoa.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>7</integer>
 		</dict>
 		<key>YaLiveCocoaD.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>5</integer>
+		</dict>
+		<key>YaLiveD iOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>15</integer>
 		</dict>
 		<key>YaLiveD.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -33,6 +38,16 @@
 			<true/>
 		</dict>
 		<key>61A9DFC80B833EF200BC506C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E5B95D7E16A97E5C00D626C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E5B95D9616A97EDB00D626C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
