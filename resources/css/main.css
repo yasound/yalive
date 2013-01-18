@@ -8,6 +8,12 @@
 // remember each stylesheet file must have at least a blank ending line, 
 // or the stylehsheet parsing may not work properly
 
+@font Helvetica
+{
+  Name: "Helvetica";
+  Size: 12;
+}
+
 
 +nuiSimpleContainer Deck
 {
@@ -24,7 +30,7 @@
 
   +nuiButton PlayPause
   {
-    +nuiLabel{ Text: "Play/Pause"; }
+    +nuiLabel{ Text: "Play/Pause"; Font: Helvetica; }
     
     Position: topleft;
   }

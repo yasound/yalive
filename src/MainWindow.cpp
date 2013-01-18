@@ -41,6 +41,7 @@ MainWindow::MainWindow(const nglContextInfo& rContextInfo, const nglWindowInfo& 
   mpDeckB = new Deck(pWidget);
 
   // Load iTunes DB:
+  /*
   iTunesLibrary lib;
   bool res = lib.LoadFromXMLFile("/Users/meeloo/Music/iTunes/iTunes Music Library.xml");
 
@@ -48,6 +49,7 @@ MainWindow::MainWindow(const nglContextInfo& rContextInfo, const nglWindowInfo& 
   {
     NGL_OUT("Unable to load iTunes library from XML file");
   }
+   */
 }
 
 MainWindow::~MainWindow()
