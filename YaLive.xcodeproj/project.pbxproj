@@ -52,15 +52,21 @@
 		6E37ABB816AD877B00C333A4 /* RequestBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9916AD877B00C333A4 /* RequestBuilder.cpp */; };
 		6E37ABB916AD877B00C333A4 /* RequestBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9916AD877B00C333A4 /* RequestBuilder.cpp */; };
 		6E37ABC116AD884700C333A4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37ABC016AD884700C333A4 /* WebKit.framework */; };
-		6E37ABC416AD886600C333A4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC316AD886600C333A4 /* LoginViewController.m */; };
+		6E37ABC416AD886600C333A4 /* LoginViewControllerCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC316AD886600C333A4 /* LoginViewControllerCocoa.m */; };
 		6E37ABC716AD896000C333A4 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC516AD896000C333A4 /* Header.cpp */; };
 		6E37ABC816AD896000C333A4 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC516AD896000C333A4 /* Header.cpp */; };
 		6E37ABC916AD896000C333A4 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC516AD896000C333A4 /* Header.cpp */; };
 		6E37ABCA16AD896000C333A4 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC516AD896000C333A4 /* Header.cpp */; };
 		6E37ABCB16AD896000C333A4 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC516AD896000C333A4 /* Header.cpp */; };
 		6E37ABCC16AD896000C333A4 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC516AD896000C333A4 /* Header.cpp */; };
-		6E37ABCE16AD9EE400C333A4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC316AD886600C333A4 /* LoginViewController.m */; };
+		6E37ABCE16AD9EE400C333A4 /* LoginViewControllerCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC316AD886600C333A4 /* LoginViewControllerCocoa.m */; };
 		6E37ABCF16AD9EFE00C333A4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37ABC016AD884700C333A4 /* WebKit.framework */; };
+		6E37ABD416ADA4ED00C333A4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABD316ADA4ED00C333A4 /* LoginViewController.m */; };
+		6E37ABD516ADA4ED00C333A4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABD316ADA4ED00C333A4 /* LoginViewController.m */; };
+		6E37ABD616ADA4ED00C333A4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABD316ADA4ED00C333A4 /* LoginViewController.m */; };
+		6E37ABD716ADA4ED00C333A4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABD316ADA4ED00C333A4 /* LoginViewController.m */; };
+		6E37ABD816ADA4ED00C333A4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABD316ADA4ED00C333A4 /* LoginViewController.m */; };
+		6E37ABD916ADA4ED00C333A4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABD316ADA4ED00C333A4 /* LoginViewController.m */; };
 		BCBCB15F0DFD45BD002E8BC3 /* libnui3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBCB15E0DFD45B6002E8BC3 /* libnui3.a */; };
 		E59CD16A11EA0C4000955611 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59CD16911EA0C4000955611 /* Cocoa.framework */; };
 		E5B95DA516A97EDB00D626C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5B95DA316A97EDB00D626C8 /* InfoPlist.strings */; };
@@ -289,10 +295,12 @@
 		6E37AB9A16AD877B00C333A4 /* RequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestBuilder.h; sourceTree = "<group>"; };
 		6E37AB9B16AD877B00C333A4 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = src/Settings.h; sourceTree = "<group>"; };
 		6E37ABC016AD884700C333A4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		6E37ABC216AD886600C333A4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = src/LoginViewController.h; sourceTree = "<group>"; };
-		6E37ABC316AD886600C333A4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = src/LoginViewController.m; sourceTree = "<group>"; };
+		6E37ABC216AD886600C333A4 /* LoginViewControllerCocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewControllerCocoa.h; path = src/LoginViewControllerCocoa.h; sourceTree = "<group>"; };
+		6E37ABC316AD886600C333A4 /* LoginViewControllerCocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewControllerCocoa.m; path = src/LoginViewControllerCocoa.m; sourceTree = "<group>"; };
 		6E37ABC516AD896000C333A4 /* Header.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Header.cpp; path = src/Header.cpp; sourceTree = "<group>"; };
 		6E37ABC616AD896000C333A4 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Header.h; path = src/Header.h; sourceTree = "<group>"; };
+		6E37ABD216ADA4ED00C333A4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = src/LoginViewController.h; sourceTree = "<group>"; };
+		6E37ABD316ADA4ED00C333A4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = src/LoginViewController.m; sourceTree = "<group>"; };
 		BCBCB1520DFD45B5002E8BC3 /* nui3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = nui3.xcodeproj; path = ../nui3/nui3.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E59CD16911EA0C4000955611 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E59CD30011EA94A000955611 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
@@ -470,8 +478,7 @@
 		61A9DE4A0B833CD000BC506C /* sources */ = {
 			isa = PBXGroup;
 			children = (
-				6E37ABC216AD886600C333A4 /* LoginViewController.h */,
-				6E37ABC316AD886600C333A4 /* LoginViewController.m */,
+				6E37ABD016ADA4B600C333A4 /* NativeGUI */,
 				6E37AB9016AD877B00C333A4 /* Models */,
 				6E37AB9B16AD877B00C333A4 /* Settings.h */,
 				E59CD30011EA94A000955611 /* Info.plist */,
@@ -521,6 +528,25 @@
 			);
 			name = Models;
 			path = src/Models;
+			sourceTree = "<group>";
+		};
+		6E37ABD016ADA4B600C333A4 /* NativeGUI */ = {
+			isa = PBXGroup;
+			children = (
+				6E37ABD116ADA4C800C333A4 /* Cocoa */,
+				6E37ABD216ADA4ED00C333A4 /* LoginViewController.h */,
+				6E37ABD316ADA4ED00C333A4 /* LoginViewController.m */,
+			);
+			name = NativeGUI;
+			sourceTree = "<group>";
+		};
+		6E37ABD116ADA4C800C333A4 /* Cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				6E37ABC216AD886600C333A4 /* LoginViewControllerCocoa.h */,
+				6E37ABC316AD886600C333A4 /* LoginViewControllerCocoa.m */,
+			);
+			name = Cocoa;
 			sourceTree = "<group>";
 		};
 		BCBCB1530DFD45B5002E8BC3 /* Products */ = {
@@ -934,6 +960,7 @@
 				6E37ABAE16AD877B00C333A4 /* Radio.cpp in Sources */,
 				6E37ABB416AD877B00C333A4 /* RequestBuilder.cpp in Sources */,
 				6E37ABC716AD896000C333A4 /* Header.cpp in Sources */,
+				6E37ABD416ADA4ED00C333A4 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -952,6 +979,7 @@
 				6E37ABAF16AD877B00C333A4 /* Radio.cpp in Sources */,
 				6E37ABB516AD877B00C333A4 /* RequestBuilder.cpp in Sources */,
 				6E37ABC816AD896000C333A4 /* Header.cpp in Sources */,
+				6E37ABD516ADA4ED00C333A4 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -975,6 +1003,7 @@
 				6E37ABB216AD877B00C333A4 /* Radio.cpp in Sources */,
 				6E37ABB816AD877B00C333A4 /* RequestBuilder.cpp in Sources */,
 				6E37ABCB16AD896000C333A4 /* Header.cpp in Sources */,
+				6E37ABD816ADA4ED00C333A4 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -998,6 +1027,7 @@
 				6E37ABB316AD877B00C333A4 /* Radio.cpp in Sources */,
 				6E37ABB916AD877B00C333A4 /* RequestBuilder.cpp in Sources */,
 				6E37ABCC16AD896000C333A4 /* Header.cpp in Sources */,
+				6E37ABD916ADA4ED00C333A4 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1015,8 +1045,9 @@
 				6E37ABAB16AD877B00C333A4 /* Object.cpp in Sources */,
 				6E37ABB116AD877B00C333A4 /* Radio.cpp in Sources */,
 				6E37ABB716AD877B00C333A4 /* RequestBuilder.cpp in Sources */,
-				6E37ABCE16AD9EE400C333A4 /* LoginViewController.m in Sources */,
+				6E37ABCE16AD9EE400C333A4 /* LoginViewControllerCocoa.m in Sources */,
 				6E37ABCA16AD896000C333A4 /* Header.cpp in Sources */,
+				6E37ABD716ADA4ED00C333A4 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1034,8 +1065,9 @@
 				6E37ABAA16AD877B00C333A4 /* Object.cpp in Sources */,
 				6E37ABB016AD877B00C333A4 /* Radio.cpp in Sources */,
 				6E37ABB616AD877B00C333A4 /* RequestBuilder.cpp in Sources */,
-				6E37ABC416AD886600C333A4 /* LoginViewController.m in Sources */,
+				6E37ABC416AD886600C333A4 /* LoginViewControllerCocoa.m in Sources */,
 				6E37ABC916AD896000C333A4 /* Header.cpp in Sources */,
+				6E37ABD616ADA4ED00C333A4 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1163,6 +1195,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YaLiveD iOS/YaLiveD iOS-Prefix.pch";
@@ -1193,6 +1226,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YaLiveD iOS/YaLiveD iOS-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = NUI_IPHONE;

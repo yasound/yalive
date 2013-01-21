@@ -2,25 +2,20 @@
 //  LoginViewController.h
 //  YaLive
 //
-//  Created by Jérôme BLONDON on 08/01/13.
+//  Created by Jérôme BLONDON on 21/01/13.
 //
 //
 
+#import <Foundation/Foundation.h>
 #import "nui.h"
-#import <Cocoa/Cocoa.h>
-#import "WebKit/WebKit.h"
 #import "Header.h"
 
-@interface LoginViewController : NSWindowController
+@interface LoginViewController : NSObject
 {
-  NSWindow *mpWindow;
-  WebView *mpWebView;
   Header *mpCB;
 }
-- (id) initWithCB:(Header*)cb;
-- (void)webView:(WebView *)webView windowScriptObjectAvailable:(WebScriptObject *)windowScriptObject;
-- (void)webView:(WebView *)sender runJavaScriptAlertPanelWithMessage:(NSString *)message;
 
--(void)loginCompleted:(NSString*)sessionId;
+-(void)login:(Header*) cb;
 -(void)logout;
+
 @end

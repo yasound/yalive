@@ -11,9 +11,7 @@
 #include "Radio.h"
 #include "RequestBuilder.h"
 
-#ifdef _COCOA_
 #include "LoginViewController.h"
-#endif 
 
 Header::Header(nuiWidget* pHeader)
 : mSink(this)
@@ -37,9 +35,9 @@ void Header::OnLogin(const nuiEvent& rEvent)
 {
   NGL_OUT("Login");
 
-#ifdef _COCOA_
-  LoginViewController* login = [[LoginViewController alloc] initWithCB:this];
-#endif
+  LoginViewController* login = [[LoginViewController alloc] init];
+  [login login:this];
+  [login release];
 }
 
 
