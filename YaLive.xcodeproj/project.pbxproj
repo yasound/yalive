@@ -67,6 +67,10 @@
 		6E37ABD716ADA4ED00C333A4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABD316ADA4ED00C333A4 /* LoginViewController.m */; };
 		6E37ABD816ADA4ED00C333A4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABD316ADA4ED00C333A4 /* LoginViewController.m */; };
 		6E37ABD916ADA4ED00C333A4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABD316ADA4ED00C333A4 /* LoginViewController.m */; };
+		6E43786E16ADDD4B008718E5 /* LoginViewControllerUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E43786C16ADDD4B008718E5 /* LoginViewControllerUIKit.m */; };
+		6E43786F16ADDD4B008718E5 /* LoginViewControllerUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E43786C16ADDD4B008718E5 /* LoginViewControllerUIKit.m */; };
+		6E43787016ADDD4B008718E5 /* LoginViewControllerUIKit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E43786D16ADDD4B008718E5 /* LoginViewControllerUIKit.xib */; };
+		6E43787116ADDD4B008718E5 /* LoginViewControllerUIKit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E43786D16ADDD4B008718E5 /* LoginViewControllerUIKit.xib */; };
 		BCBCB15F0DFD45BD002E8BC3 /* libnui3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBCB15E0DFD45B6002E8BC3 /* libnui3.a */; };
 		E59CD16A11EA0C4000955611 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59CD16911EA0C4000955611 /* Cocoa.framework */; };
 		E5B95DA516A97EDB00D626C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5B95DA316A97EDB00D626C8 /* InfoPlist.strings */; };
@@ -301,6 +305,9 @@
 		6E37ABC616AD896000C333A4 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Header.h; path = src/Header.h; sourceTree = "<group>"; };
 		6E37ABD216ADA4ED00C333A4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = src/LoginViewController.h; sourceTree = "<group>"; };
 		6E37ABD316ADA4ED00C333A4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = src/LoginViewController.m; sourceTree = "<group>"; };
+		6E43786B16ADDD4B008718E5 /* LoginViewControllerUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewControllerUIKit.h; path = src/LoginViewControllerUIKit.h; sourceTree = "<group>"; };
+		6E43786C16ADDD4B008718E5 /* LoginViewControllerUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewControllerUIKit.m; path = src/LoginViewControllerUIKit.m; sourceTree = "<group>"; };
+		6E43786D16ADDD4B008718E5 /* LoginViewControllerUIKit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewControllerUIKit.xib; path = src/LoginViewControllerUIKit.xib; sourceTree = "<group>"; };
 		BCBCB1520DFD45B5002E8BC3 /* nui3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = nui3.xcodeproj; path = ../nui3/nui3.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E59CD16911EA0C4000955611 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E59CD30011EA94A000955611 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
@@ -533,6 +540,7 @@
 		6E37ABD016ADA4B600C333A4 /* NativeGUI */ = {
 			isa = PBXGroup;
 			children = (
+				6E37ABDA16ADAFA000C333A4 /* UIKit */,
 				6E37ABD116ADA4C800C333A4 /* Cocoa */,
 				6E37ABD216ADA4ED00C333A4 /* LoginViewController.h */,
 				6E37ABD316ADA4ED00C333A4 /* LoginViewController.m */,
@@ -547,6 +555,16 @@
 				6E37ABC316AD886600C333A4 /* LoginViewControllerCocoa.m */,
 			);
 			name = Cocoa;
+			sourceTree = "<group>";
+		};
+		6E37ABDA16ADAFA000C333A4 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				6E43786B16ADDD4B008718E5 /* LoginViewControllerUIKit.h */,
+				6E43786C16ADDD4B008718E5 /* LoginViewControllerUIKit.m */,
+				6E43786D16ADDD4B008718E5 /* LoginViewControllerUIKit.xib */,
+			);
+			name = UIKit;
 			sourceTree = "<group>";
 		};
 		BCBCB1530DFD45B5002E8BC3 /* Products */ = {
@@ -843,6 +861,7 @@
 				E5B95DAD16A97EDB00D626C8 /* Default.png in Resources */,
 				E5B95DAF16A97EDB00D626C8 /* Default@2x.png in Resources */,
 				E5B95DB116A97EDB00D626C8 /* Default-568h@2x.png in Resources */,
+				6E43787016ADDD4B008718E5 /* LoginViewControllerUIKit.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,6 +873,7 @@
 				E5B95E2C16A9983E00D626C8 /* Default.png in Resources */,
 				E5B95E2D16A9983E00D626C8 /* Default@2x.png in Resources */,
 				E5B95E2E16A9983E00D626C8 /* Default-568h@2x.png in Resources */,
+				6E43787116ADDD4B008718E5 /* LoginViewControllerUIKit.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1004,6 +1024,7 @@
 				6E37ABB816AD877B00C333A4 /* RequestBuilder.cpp in Sources */,
 				6E37ABCB16AD896000C333A4 /* Header.cpp in Sources */,
 				6E37ABD816ADA4ED00C333A4 /* LoginViewController.m in Sources */,
+				6E43786E16ADDD4B008718E5 /* LoginViewControllerUIKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1028,6 +1049,7 @@
 				6E37ABB916AD877B00C333A4 /* RequestBuilder.cpp in Sources */,
 				6E37ABCC16AD896000C333A4 /* Header.cpp in Sources */,
 				6E37ABD916ADA4ED00C333A4 /* LoginViewController.m in Sources */,
+				6E43786F16ADDD4B008718E5 /* LoginViewControllerUIKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
