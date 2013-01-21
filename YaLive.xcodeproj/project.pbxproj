@@ -21,6 +21,44 @@
 		61A9DFF40B83433800BC506C /* MainWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61A9DFF10B83433800BC506C /* MainWindow.cpp */; };
 		61A9DFF50B83433800BC506C /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61A9DFEF0B83433800BC506C /* Application.cpp */; };
 		61A9DFF60B83433800BC506C /* MainWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61A9DFF10B83433800BC506C /* MainWindow.cpp */; };
+		6E37AB9C16AD877B00C333A4 /* Collection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9116AD877B00C333A4 /* Collection.cpp */; };
+		6E37AB9D16AD877B00C333A4 /* Collection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9116AD877B00C333A4 /* Collection.cpp */; };
+		6E37AB9E16AD877B00C333A4 /* Collection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9116AD877B00C333A4 /* Collection.cpp */; };
+		6E37AB9F16AD877B00C333A4 /* Collection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9116AD877B00C333A4 /* Collection.cpp */; };
+		6E37ABA016AD877B00C333A4 /* Collection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9116AD877B00C333A4 /* Collection.cpp */; };
+		6E37ABA116AD877B00C333A4 /* Collection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9116AD877B00C333A4 /* Collection.cpp */; };
+		6E37ABA216AD877B00C333A4 /* MyRadios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9316AD877B00C333A4 /* MyRadios.cpp */; };
+		6E37ABA316AD877B00C333A4 /* MyRadios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9316AD877B00C333A4 /* MyRadios.cpp */; };
+		6E37ABA416AD877B00C333A4 /* MyRadios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9316AD877B00C333A4 /* MyRadios.cpp */; };
+		6E37ABA516AD877B00C333A4 /* MyRadios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9316AD877B00C333A4 /* MyRadios.cpp */; };
+		6E37ABA616AD877B00C333A4 /* MyRadios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9316AD877B00C333A4 /* MyRadios.cpp */; };
+		6E37ABA716AD877B00C333A4 /* MyRadios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9316AD877B00C333A4 /* MyRadios.cpp */; };
+		6E37ABA816AD877B00C333A4 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9516AD877B00C333A4 /* Object.cpp */; };
+		6E37ABA916AD877B00C333A4 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9516AD877B00C333A4 /* Object.cpp */; };
+		6E37ABAA16AD877B00C333A4 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9516AD877B00C333A4 /* Object.cpp */; };
+		6E37ABAB16AD877B00C333A4 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9516AD877B00C333A4 /* Object.cpp */; };
+		6E37ABAC16AD877B00C333A4 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9516AD877B00C333A4 /* Object.cpp */; };
+		6E37ABAD16AD877B00C333A4 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9516AD877B00C333A4 /* Object.cpp */; };
+		6E37ABAE16AD877B00C333A4 /* Radio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9716AD877B00C333A4 /* Radio.cpp */; };
+		6E37ABAF16AD877B00C333A4 /* Radio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9716AD877B00C333A4 /* Radio.cpp */; };
+		6E37ABB016AD877B00C333A4 /* Radio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9716AD877B00C333A4 /* Radio.cpp */; };
+		6E37ABB116AD877B00C333A4 /* Radio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9716AD877B00C333A4 /* Radio.cpp */; };
+		6E37ABB216AD877B00C333A4 /* Radio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9716AD877B00C333A4 /* Radio.cpp */; };
+		6E37ABB316AD877B00C333A4 /* Radio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9716AD877B00C333A4 /* Radio.cpp */; };
+		6E37ABB416AD877B00C333A4 /* RequestBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9916AD877B00C333A4 /* RequestBuilder.cpp */; };
+		6E37ABB516AD877B00C333A4 /* RequestBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9916AD877B00C333A4 /* RequestBuilder.cpp */; };
+		6E37ABB616AD877B00C333A4 /* RequestBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9916AD877B00C333A4 /* RequestBuilder.cpp */; };
+		6E37ABB716AD877B00C333A4 /* RequestBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9916AD877B00C333A4 /* RequestBuilder.cpp */; };
+		6E37ABB816AD877B00C333A4 /* RequestBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9916AD877B00C333A4 /* RequestBuilder.cpp */; };
+		6E37ABB916AD877B00C333A4 /* RequestBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9916AD877B00C333A4 /* RequestBuilder.cpp */; };
+		6E37ABC116AD884700C333A4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37ABC016AD884700C333A4 /* WebKit.framework */; };
+		6E37ABC416AD886600C333A4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC316AD886600C333A4 /* LoginViewController.m */; };
+		6E37ABC716AD896000C333A4 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC516AD896000C333A4 /* Header.cpp */; };
+		6E37ABC816AD896000C333A4 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC516AD896000C333A4 /* Header.cpp */; };
+		6E37ABC916AD896000C333A4 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC516AD896000C333A4 /* Header.cpp */; };
+		6E37ABCA16AD896000C333A4 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC516AD896000C333A4 /* Header.cpp */; };
+		6E37ABCB16AD896000C333A4 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC516AD896000C333A4 /* Header.cpp */; };
+		6E37ABCC16AD896000C333A4 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC516AD896000C333A4 /* Header.cpp */; };
 		BCBCB15F0DFD45BD002E8BC3 /* libnui3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBCB15E0DFD45B6002E8BC3 /* libnui3.a */; };
 		E59CD16A11EA0C4000955611 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59CD16911EA0C4000955611 /* Cocoa.framework */; };
 		E5B95DA516A97EDB00D626C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5B95DA316A97EDB00D626C8 /* InfoPlist.strings */; };
@@ -237,6 +275,22 @@
 		61A9DFF00B83433800BC506C /* Application.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Application.h; path = src/Application.h; sourceTree = "<group>"; };
 		61A9DFF10B83433800BC506C /* MainWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = MainWindow.cpp; path = src/MainWindow.cpp; sourceTree = "<group>"; };
 		61A9DFF20B83433800BC506C /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MainWindow.h; path = src/MainWindow.h; sourceTree = "<group>"; };
+		6E37AB9116AD877B00C333A4 /* Collection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Collection.cpp; sourceTree = "<group>"; };
+		6E37AB9216AD877B00C333A4 /* Collection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collection.h; sourceTree = "<group>"; };
+		6E37AB9316AD877B00C333A4 /* MyRadios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyRadios.cpp; sourceTree = "<group>"; };
+		6E37AB9416AD877B00C333A4 /* MyRadios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRadios.h; sourceTree = "<group>"; };
+		6E37AB9516AD877B00C333A4 /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
+		6E37AB9616AD877B00C333A4 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		6E37AB9716AD877B00C333A4 /* Radio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Radio.cpp; sourceTree = "<group>"; };
+		6E37AB9816AD877B00C333A4 /* Radio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Radio.h; sourceTree = "<group>"; };
+		6E37AB9916AD877B00C333A4 /* RequestBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RequestBuilder.cpp; sourceTree = "<group>"; };
+		6E37AB9A16AD877B00C333A4 /* RequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestBuilder.h; sourceTree = "<group>"; };
+		6E37AB9B16AD877B00C333A4 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = src/Settings.h; sourceTree = "<group>"; };
+		6E37ABC016AD884700C333A4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		6E37ABC216AD886600C333A4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = src/LoginViewController.h; sourceTree = "<group>"; };
+		6E37ABC316AD886600C333A4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = src/LoginViewController.m; sourceTree = "<group>"; };
+		6E37ABC516AD896000C333A4 /* Header.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Header.cpp; path = src/Header.cpp; sourceTree = "<group>"; };
+		6E37ABC616AD896000C333A4 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Header.h; path = src/Header.h; sourceTree = "<group>"; };
 		BCBCB1520DFD45B5002E8BC3 /* nui3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = nui3.xcodeproj; path = ../nui3/nui3.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E59CD16911EA0C4000955611 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E59CD30011EA94A000955611 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
@@ -359,6 +413,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E37ABC116AD884700C333A4 /* WebKit.framework in Frameworks */,
 				E5EF6FC011E77DE8000FB337 /* CoreFoundation.framework in Frameworks */,
 				E5EF6FC111E77DE8000FB337 /* CoreServices.framework in Frameworks */,
 				E5EF6FC311E77DE8000FB337 /* OpenGL.framework in Frameworks */,
@@ -373,6 +428,7 @@
 		61A9DE3D0B833C9200BC506C = {
 			isa = PBXGroup;
 			children = (
+				6E37ABC016AD884700C333A4 /* WebKit.framework */,
 				E5C5912216722BA500BAEDE4 /* resources */,
 				E5C5910A1672188500BAEDE4 /* YaLiveCocoa.entitlements */,
 				61A9DE4A0B833CD000BC506C /* sources */,
@@ -415,6 +471,10 @@
 		61A9DE4A0B833CD000BC506C /* sources */ = {
 			isa = PBXGroup;
 			children = (
+				6E37ABC216AD886600C333A4 /* LoginViewController.h */,
+				6E37ABC316AD886600C333A4 /* LoginViewController.m */,
+				6E37AB9016AD877B00C333A4 /* Models */,
+				6E37AB9B16AD877B00C333A4 /* Settings.h */,
 				E59CD30011EA94A000955611 /* Info.plist */,
 				E5B95DA216A97EDB00D626C8 /* YaLiveD iOS-Info.plist */,
 				61A9DFEF0B83433800BC506C /* Application.cpp */,
@@ -423,6 +483,8 @@
 				61A9DFF20B83433800BC506C /* MainWindow.h */,
 				E5C5910E167223B800BAEDE4 /* Deck.cpp */,
 				E5C5910F167223B800BAEDE4 /* Deck.h */,
+				6E37ABC516AD896000C333A4 /* Header.cpp */,
+				6E37ABC616AD896000C333A4 /* Header.h */,
 				E5C591291672405500BAEDE4 /* iTunesLibrary.cpp */,
 				E5C5912A1672405500BAEDE4 /* iTunesLibrary.h */,
 				E5C5912F1672407400BAEDE4 /* SongDB.cpp */,
@@ -442,6 +504,24 @@
 				E5B95E3216A9983E00D626C8 /* YaLive.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6E37AB9016AD877B00C333A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6E37AB9116AD877B00C333A4 /* Collection.cpp */,
+				6E37AB9216AD877B00C333A4 /* Collection.h */,
+				6E37AB9316AD877B00C333A4 /* MyRadios.cpp */,
+				6E37AB9416AD877B00C333A4 /* MyRadios.h */,
+				6E37AB9516AD877B00C333A4 /* Object.cpp */,
+				6E37AB9616AD877B00C333A4 /* Object.h */,
+				6E37AB9716AD877B00C333A4 /* Radio.cpp */,
+				6E37AB9816AD877B00C333A4 /* Radio.h */,
+				6E37AB9916AD877B00C333A4 /* RequestBuilder.cpp */,
+				6E37AB9A16AD877B00C333A4 /* RequestBuilder.h */,
+			);
+			name = Models;
+			path = src/Models;
 			sourceTree = "<group>";
 		};
 		BCBCB1530DFD45B5002E8BC3 /* Products */ = {
@@ -849,6 +929,12 @@
 				E5C59110167223B800BAEDE4 /* Deck.cpp in Sources */,
 				E5C5912B1672405500BAEDE4 /* iTunesLibrary.cpp in Sources */,
 				E5C591311672407400BAEDE4 /* SongDB.cpp in Sources */,
+				6E37AB9C16AD877B00C333A4 /* Collection.cpp in Sources */,
+				6E37ABA216AD877B00C333A4 /* MyRadios.cpp in Sources */,
+				6E37ABA816AD877B00C333A4 /* Object.cpp in Sources */,
+				6E37ABAE16AD877B00C333A4 /* Radio.cpp in Sources */,
+				6E37ABB416AD877B00C333A4 /* RequestBuilder.cpp in Sources */,
+				6E37ABC716AD896000C333A4 /* Header.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,6 +947,12 @@
 				E5C59111167223B800BAEDE4 /* Deck.cpp in Sources */,
 				E5C5912C1672405500BAEDE4 /* iTunesLibrary.cpp in Sources */,
 				E5C591321672407400BAEDE4 /* SongDB.cpp in Sources */,
+				6E37AB9D16AD877B00C333A4 /* Collection.cpp in Sources */,
+				6E37ABA316AD877B00C333A4 /* MyRadios.cpp in Sources */,
+				6E37ABA916AD877B00C333A4 /* Object.cpp in Sources */,
+				6E37ABAF16AD877B00C333A4 /* Radio.cpp in Sources */,
+				6E37ABB516AD877B00C333A4 /* RequestBuilder.cpp in Sources */,
+				6E37ABC816AD896000C333A4 /* Header.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -878,6 +970,12 @@
 				E5B95DBE16A97F3A00D626C8 /* iTunesLibrary.h in Sources */,
 				E5B95DBF16A97F3A00D626C8 /* SongDB.cpp in Sources */,
 				E5B95DC016A97F3A00D626C8 /* SongDB.h in Sources */,
+				6E37ABA016AD877B00C333A4 /* Collection.cpp in Sources */,
+				6E37ABA616AD877B00C333A4 /* MyRadios.cpp in Sources */,
+				6E37ABAC16AD877B00C333A4 /* Object.cpp in Sources */,
+				6E37ABB216AD877B00C333A4 /* Radio.cpp in Sources */,
+				6E37ABB816AD877B00C333A4 /* RequestBuilder.cpp in Sources */,
+				6E37ABCB16AD896000C333A4 /* Header.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -895,6 +993,12 @@
 				E5B95E1A16A9983E00D626C8 /* iTunesLibrary.h in Sources */,
 				E5B95E1B16A9983E00D626C8 /* SongDB.cpp in Sources */,
 				E5B95E1C16A9983E00D626C8 /* SongDB.h in Sources */,
+				6E37ABA116AD877B00C333A4 /* Collection.cpp in Sources */,
+				6E37ABA716AD877B00C333A4 /* MyRadios.cpp in Sources */,
+				6E37ABAD16AD877B00C333A4 /* Object.cpp in Sources */,
+				6E37ABB316AD877B00C333A4 /* Radio.cpp in Sources */,
+				6E37ABB916AD877B00C333A4 /* RequestBuilder.cpp in Sources */,
+				6E37ABCC16AD896000C333A4 /* Header.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,6 +1011,12 @@
 				E5C59113167223B800BAEDE4 /* Deck.cpp in Sources */,
 				E5C5912E1672405500BAEDE4 /* iTunesLibrary.cpp in Sources */,
 				E5C591341672407400BAEDE4 /* SongDB.cpp in Sources */,
+				6E37AB9F16AD877B00C333A4 /* Collection.cpp in Sources */,
+				6E37ABA516AD877B00C333A4 /* MyRadios.cpp in Sources */,
+				6E37ABAB16AD877B00C333A4 /* Object.cpp in Sources */,
+				6E37ABB116AD877B00C333A4 /* Radio.cpp in Sources */,
+				6E37ABB716AD877B00C333A4 /* RequestBuilder.cpp in Sources */,
+				6E37ABCA16AD896000C333A4 /* Header.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,6 +1029,13 @@
 				E5C59112167223B800BAEDE4 /* Deck.cpp in Sources */,
 				E5C5912D1672405500BAEDE4 /* iTunesLibrary.cpp in Sources */,
 				E5C591331672407400BAEDE4 /* SongDB.cpp in Sources */,
+				6E37AB9E16AD877B00C333A4 /* Collection.cpp in Sources */,
+				6E37ABA416AD877B00C333A4 /* MyRadios.cpp in Sources */,
+				6E37ABAA16AD877B00C333A4 /* Object.cpp in Sources */,
+				6E37ABB016AD877B00C333A4 /* Radio.cpp in Sources */,
+				6E37ABB616AD877B00C333A4 /* RequestBuilder.cpp in Sources */,
+				6E37ABC416AD886600C333A4 /* LoginViewController.m in Sources */,
+				6E37ABC916AD896000C333A4 /* Header.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1132,6 +1249,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (

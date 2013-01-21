@@ -48,3 +48,12 @@
   }
 }
 
++nuiSimpleContainer Header
+{
+  +nuiButton Login
+  {
+    +nuiLabel{ Text: "Login"; }
+    Position: top;
+  }
+}
+

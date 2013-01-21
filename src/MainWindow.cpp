@@ -28,6 +28,12 @@ MainWindow::MainWindow(const nglContextInfo& rContextInfo, const nglWindowInfo& 
   LoadCSS(_T("rsrc:/css/main.css"));
 
   nuiWidget* pWidget = NULL;
+  
+  pWidget = nuiBuilder::Get().CreateWidget(_T("Header"));
+  pWidget->SetPosition(nuiTop);
+  AddChild(pWidget);
+  mpHeader = new Header(pWidget);
+  
   std::map<nglString, nglString> dict;
   dict["DeckName"] = "Deck A";
   pWidget = nuiBuilder::Get().CreateWidget(_T("Deck"), dict);

@@ -9,7 +9,7 @@
 
 #include "nuiMainWindow.h"
 #include "Deck.h"
-
+#include "Header.h"
 
 class MainWindow : public nuiMainWindow
 {
@@ -25,6 +25,7 @@ protected:
 
   Deck* mpDeckA;
   Deck* mpDeckB;
+  Header* mpHeader;
   nuiEventSink<MainWindow> mEventSink;
 };
 
