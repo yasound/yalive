@@ -9,11 +9,7 @@
 #pragma once
 
 #ifdef _DEBUG
-
-#define YASOUND_SERVER "http://localhost:8000"
-
+  #define YASOUND_SERVER "https://yasound.com"
 #else
-
-#define YASOUND_SERVER "https://yasound.com"
-
+  #define YASOUND_SERVER "https://yasound.com"
 #endif

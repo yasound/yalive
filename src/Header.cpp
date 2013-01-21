@@ -37,7 +37,7 @@ void Header::OnLogin(const nuiEvent& rEvent)
 {
   NGL_OUT("Login");
 
-#ifdef _COCOCA_
+#ifdef _COCOA_
   LoginViewController* login = [[LoginViewController alloc] initWithCB:this];
 #endif
 }

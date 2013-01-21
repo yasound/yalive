@@ -59,6 +59,8 @@
 		6E37ABCA16AD896000C333A4 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC516AD896000C333A4 /* Header.cpp */; };
 		6E37ABCB16AD896000C333A4 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC516AD896000C333A4 /* Header.cpp */; };
 		6E37ABCC16AD896000C333A4 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC516AD896000C333A4 /* Header.cpp */; };
+		6E37ABCE16AD9EE400C333A4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37ABC316AD886600C333A4 /* LoginViewController.m */; };
+		6E37ABCF16AD9EFE00C333A4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37ABC016AD884700C333A4 /* WebKit.framework */; };
 		BCBCB15F0DFD45BD002E8BC3 /* libnui3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBCB15E0DFD45B6002E8BC3 /* libnui3.a */; };
 		E59CD16A11EA0C4000955611 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59CD16911EA0C4000955611 /* Cocoa.framework */; };
 		E5B95DA516A97EDB00D626C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5B95DA316A97EDB00D626C8 /* InfoPlist.strings */; };
@@ -294,7 +296,6 @@
 		BCBCB1520DFD45B5002E8BC3 /* nui3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = nui3.xcodeproj; path = ../nui3/nui3.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E59CD16911EA0C4000955611 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E59CD30011EA94A000955611 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
-		E5B95D9216A97E5C00D626C8 /* YaLiveCocoaD copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "YaLiveCocoaD copy-Info.plist"; path = "/Users/meeloo/work/yalive/YaLiveCocoaD copy-Info.plist"; sourceTree = "<absolute>"; };
 		E5B95D9716A97EDB00D626C8 /* YaLiveD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaLiveD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B95D9A16A97EDB00D626C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E5B95D9C16A97EDB00D626C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -319,7 +320,6 @@
 		E5B95E0416A985D300D626C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E5B95E0C16A988F700D626C8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		E5B95E3216A9983E00D626C8 /* YaLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5B95E3416A9983E00D626C8 /* YaLiveD iOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "YaLiveD iOS copy-Info.plist"; path = "/Users/meeloo/work/yalive/YaLiveD iOS copy-Info.plist"; sourceTree = "<absolute>"; };
 		E5C5910A1672188500BAEDE4 /* YaLiveCocoa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = YaLiveCocoa.entitlements; sourceTree = "<group>"; };
 		E5C5910E167223B800BAEDE4 /* Deck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Deck.cpp; path = src/Deck.cpp; sourceTree = "<group>"; };
 		E5C5910F167223B800BAEDE4 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = src/Deck.h; sourceTree = "<group>"; };
@@ -401,11 +401,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E37ABCF16AD9EFE00C333A4 /* WebKit.framework in Frameworks */,
 				E5D64528120A0B92009C26A9 /* CoreFoundation.framework in Frameworks */,
 				E5D64529120A0B92009C26A9 /* CoreServices.framework in Frameworks */,
 				E5D6452A120A0B92009C26A9 /* OpenGL.framework in Frameworks */,
-				E5D6452C120A0B92009C26A9 /* Cocoa.framework in Frameworks */,
 				E5D6453D120AA7D8009C26A9 /* libnui3Cocoa.a in Frameworks */,
+				E5D6452C120A0B92009C26A9 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,8 +437,6 @@
 				E5B95DA016A97EDB00D626C8 /* YaLiveD iOS */,
 				E5B95D9916A97EDB00D626C8 /* Frameworks */,
 				61A9DFB50B833DE500BC506C /* Products */,
-				E5B95D9216A97E5C00D626C8 /* YaLiveCocoaD copy-Info.plist */,
-				E5B95E3416A9983E00D626C8 /* YaLiveD iOS copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1016,6 +1015,7 @@
 				6E37ABAB16AD877B00C333A4 /* Object.cpp in Sources */,
 				6E37ABB116AD877B00C333A4 /* Radio.cpp in Sources */,
 				6E37ABB716AD877B00C333A4 /* RequestBuilder.cpp in Sources */,
+				6E37ABCE16AD9EE400C333A4 /* LoginViewController.m in Sources */,
 				6E37ABCA16AD896000C333A4 /* Header.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1221,6 +1221,7 @@
 				GCC_DEBUGGING_SYMBOLS = default;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = _COCOA_;
