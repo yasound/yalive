@@ -48,15 +48,19 @@ MainWindow::MainWindow(const nglContextInfo& rContextInfo, const nglWindowInfo& 
   mpDeckB = new Deck(pWidget);
 
   // Load iTunes DB:
-  /*
+#ifdef _COCOA_
+  nglPath homePath = nglPath(ePathUser);
+  nglString iTunePath;
+  iTunePath.Format("%s/%s", homePath.GetPathName().GetChars(), "Music/iTunes/iTunes Music Library.xml");
+  NGL_OUT("%s", iTunePath.GetChars());
   iTunesLibrary lib;
-  bool res = lib.LoadFromXMLFile("/Users/meeloo/Music/iTunes/iTunes Music Library.xml");
+  bool res = lib.LoadFromXMLFile(iTunePath);
 
   if (!res)
   {
     NGL_OUT("Unable to load iTunes library from XML file");
   }
-   */
+#endif
 }
 
 MainWindow::~MainWindow()
