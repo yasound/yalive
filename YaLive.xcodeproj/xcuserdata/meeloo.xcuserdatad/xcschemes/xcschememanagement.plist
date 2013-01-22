@@ -4,35 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>YaLive iOS.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>16</integer>
-		</dict>
-		<key>YaLive.xcscheme</key>
+		<key>YaLive OSX.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>YaLiveCocoa.xcscheme</key>
+		<key>YaLive iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>3</integer>
 		</dict>
-		<key>YaLiveCocoaD.xcscheme</key>
+		<key>YaLiveD OSX.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>0</integer>
 		</dict>
 		<key>YaLiveD iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>15</integer>
-		</dict>
-		<key>YaLiveD.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
