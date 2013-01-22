@@ -1139,7 +1139,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				HEADER_SEARCH_PATHS = ../nui3/include;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = (
@@ -1267,14 +1267,13 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_DEBUGGING_SYMBOLS = default;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
-				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = _COCOA_;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = YaLiveCocoa;
@@ -1284,7 +1283,6 @@
 					"-Wno-unknown-pragmas",
 				);
 				WRAPPER_EXTENSION = app;
-				ZERO_LINK = NO;
 			};
 			name = Default;
 		};
@@ -1296,12 +1294,10 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_DEBUGGING_SYMBOLS = full;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
-				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					_COCOA_,
@@ -1316,7 +1312,6 @@
 					"-Wno-unknown-pragmas",
 				);
 				WRAPPER_EXTENSION = app;
-				ZERO_LINK = NO;
 			};
 			name = Default;
 		};

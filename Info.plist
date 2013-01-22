@@ -41,6 +41,8 @@
 	<true/>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.music</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
 	<key>NSPrincipalClass</key>
 	<string>nglNSApplication</string>
 	<key>UIStatusBarHidden</key>
