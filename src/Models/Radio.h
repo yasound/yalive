@@ -9,7 +9,7 @@
 #pragma once
 
 #include "nui.h"
-
+#include "nuiJson.h"
 #include "Object.h"
 
 namespace Models {
@@ -19,6 +19,9 @@ namespace Models {
     Radio() {};
     virtual ~Radio() {};
     
+    Radio* Parse(nuiJson::Value &data);
+    
+    // Getter/setters
     const nglString &GetName()
     {
       return mName;

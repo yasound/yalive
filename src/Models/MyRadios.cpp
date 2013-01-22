@@ -24,15 +24,5 @@ Models::MyRadios::~MyRadios()
 Models::Object* Models::MyRadios::ParseObject(nuiJson::Value &object)
 {
   Radio *pRadio = new Radio();
-  for (uint32 i = 0; i < object.getMemberNames().size(); i++)
-  {
-    std::string name = object.getMemberNames()[i];
-    nuiJson::Value& rVal = object[name];
-    
-    if (name.compare("name") == 0)
-    {
-      pRadio->SetName(rVal.asString());
-    }
-  }
-  return pRadio;
+  return pRadio->Parse(object);
 }
