@@ -11,12 +11,12 @@
 
 @interface LoginViewControllerUIKit : UIViewController<UIWebViewDelegate>
 {
-  IBOutlet UIWebView *mpWebView;
+  UIWebView *mpWebView;
   id <LoginEventsDelegate> delegate;
 }
 
 @property (retain) id delegate;
-@property (nonatomic, retain) IBOutlet UIWebView *mpWebView;
+@property (nonatomic, retain) UIWebView *mpWebView;
 
 - (void)loginCompleted:(NSString *)sessionId;
 

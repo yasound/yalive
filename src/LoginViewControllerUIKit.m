@@ -17,6 +17,10 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+      mpWebView = [[UIWebView alloc] init];
+      
+      [[self view] addSubview:mpWebView];
+      
       UIWindow *mainWindow = (UIWindow *)([[UIApplication sharedApplication].windows objectAtIndex:0]);
       [mainWindow addSubview:[self view]];
     }
@@ -34,6 +38,12 @@
   NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
   mpWebView.delegate = self;
   [mpWebView loadRequest:requestObj];
+}
+
+- (void)dealloc
+{
+  [mpWebView release];
+  [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning

@@ -28,7 +28,7 @@
 # endif
   
 #ifdef NUI_IPHONE
-  LoginViewControllerUIKit *pImpl = [[LoginViewControllerUIKit alloc] initWithNibName:@"LoginViewControllerUIKit" bundle:nil];
+  LoginViewControllerUIKit *pImpl = [[LoginViewControllerUIKit alloc] initWithNibName:nil bundle:nil];
   pImpl.delegate = self;
   mpImpl = pImpl;
 #endif
