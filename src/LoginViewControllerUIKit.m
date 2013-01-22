@@ -7,15 +7,18 @@
 //
 
 #import "LoginViewControllerUIKit.h"
+#import "Settings.h"
 
 @implementation LoginViewControllerUIKit
 @synthesize mpWebView;
+@synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+      UIWindow *mainWindow = (UIWindow *)([[UIApplication sharedApplication].windows objectAtIndex:0]);
+      [mainWindow addSubview:[self view]];
     }
     return self;
 }
@@ -23,15 +26,13 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  // Do any additional setup after loading the view from its nib.
-  NSString *urlAddress = @"http://www.google.com";
-  //Create a URL object.
-  NSURL *url = [NSURL URLWithString:urlAddress];
 
-  //URL Requst Object
+
+  [self logout];
+  NSString *urlString = [[NSString alloc] initWithFormat:@"%s/live/login/", YASOUND_SERVER];
+  NSURL *url = [NSURL URLWithString:urlString];
   NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-
-  //Load the request in the UIWebView.
+  mpWebView.delegate = self;
   [mpWebView loadRequest:requestObj];
 }
 
@@ -50,5 +51,51 @@
 {
   return YES;
 }
+
+-(void)logout
+{
+  NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+  NSString *server = [[NSString alloc] initWithFormat:@"%s", YASOUND_SERVER];
+  for (NSHTTPCookie *cookie in [cookieJar cookiesForURL:[NSURL URLWithString:server]])
+  {
+    [cookieJar deleteCookie:cookie];
+  }
+  [server dealloc];
+}
+
+
+#pragma mark Webview delegate methods
+
+- (BOOL)webView:(UIWebView *)webView2
+shouldStartLoadWithRequest:(NSURLRequest *)request
+ navigationType:(UIWebViewNavigationType)navigationType
+{  
+  // Intercept custom location change, URL begins with "js-call:"
+  if ([[[request URL] absoluteString] hasPrefix:@"js-frame:"]) {
+    NSString *requestString = [[request URL] absoluteString];
+    NSArray *components = [requestString componentsSeparatedByString:@":"];
+    NSString *function = [components objectAtIndex:1];
+    NSString *param = [components objectAtIndex:2];
+    
+    if ([function isEqualToString:@"loginCompleted"])
+    {
+      [self loginCompleted:param];
+    }
+    
+    // Cancel the location change
+    return NO;
+  }
+  
+  // Accept this location change
+  return YES;
+  
+}
+
+- (void)loginCompleted:(NSString *)sessionId
+{
+  [[self view] removeFromSuperview];
+  [[self delegate] loginCompleted:sessionId];
+}
+
 
 @end

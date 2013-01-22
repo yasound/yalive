@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginViewController.h"
 
-@interface LoginViewControllerUIKit : UIViewController
+@interface LoginViewControllerUIKit : UIViewController<UIWebViewDelegate>
 {
   IBOutlet UIWebView *mpWebView;
+  id <LoginEventsDelegate> delegate;
 }
 
+@property (retain) id delegate;
 @property (nonatomic, retain) IBOutlet UIWebView *mpWebView;
+
+- (void)loginCompleted:(NSString *)sessionId;
 
 @end

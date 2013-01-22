@@ -29,8 +29,8 @@
   
 #ifdef NUI_IPHONE
   LoginViewControllerUIKit *pImpl = [[LoginViewControllerUIKit alloc] initWithNibName:@"LoginViewControllerUIKit" bundle:nil];
-  UIWindow *mainWindow = (UIWindow *)([[UIApplication sharedApplication].windows objectAtIndex:0]);
-  [mainWindow addSubview:[pImpl view]];
+  pImpl.delegate = self;
+  mpImpl = pImpl;
 #endif
   
   return self;

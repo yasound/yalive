@@ -134,11 +134,12 @@
 -(void)logout
 {
   NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-  for (NSHTTPCookie *cookie in [cookieJar cookiesForURL:[NSURL URLWithString:@"http://localhost:8000"]])
+  NSString *server = [[NSString alloc] initWithFormat:@"%s", YASOUND_SERVER];
+  for (NSHTTPCookie *cookie in [cookieJar cookiesForURL:[NSURL URLWithString:server]])
   {
     [cookieJar deleteCookie:cookie];
   }
-  
+  [server dealloc];
 }
 
 
