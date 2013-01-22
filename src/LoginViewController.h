@@ -10,12 +10,19 @@
 #import "nui.h"
 #import "Header.h"
 
-@interface LoginViewController : NSObject
+@protocol LoginEventsDelegate <NSObject>
+@required
+- (void) loginCompleted: (NSString *)sessionId;
+@end
+
+
+@interface LoginViewController : NSObject <LoginEventsDelegate>
 {
   Header *mpCB;
+  id mpImpl;
 }
 
--(void)login:(Header*) cb;
+-(id)initWithCB:(Header*) cb;
 -(void)logout;
 
 @end

@@ -12,11 +12,11 @@
 
 @implementation LoginViewControllerCocoa
 
-- (id) initWithCB:(Header *)cb
+@synthesize delegate;
+
+- (id) init
 {
   self = [super init];
-  mpCB = cb;
-  
   [self logout];
   mpWindow = [[NSWindow alloc]
                       initWithContentRect: NSMakeRect(0, 0, 640, 650)
@@ -128,7 +128,7 @@
 -(void)loginCompleted:(NSString*)sessionId
 {
   [mpWindow performClose:self];
-  mpCB->OnLoginReceived([sessionId cStringUsingEncoding:NSASCIIStringEncoding]);
+  [[self delegate] loginCompleted:sessionId];
 }
 
 -(void)logout

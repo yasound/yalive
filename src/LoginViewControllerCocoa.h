@@ -9,15 +9,17 @@
 #import "nui.h"
 #import <Cocoa/Cocoa.h>
 #import "WebKit/WebKit.h"
-#import "Header.h"
+#import "LoginViewController.h"
 
 @interface LoginViewControllerCocoa : NSWindowController
 {
   NSWindow *mpWindow;
   WebView *mpWebView;
-  Header *mpCB;
+  id <LoginEventsDelegate> delegate;
 }
-- (id) initWithCB:(Header*)cb;
+@property (retain) id delegate;
+
+- (id) init;
 - (void)webView:(WebView *)webView windowScriptObjectAvailable:(WebScriptObject *)windowScriptObject;
 - (void)webView:(WebView *)sender runJavaScriptAlertPanelWithMessage:(NSString *)message;
 

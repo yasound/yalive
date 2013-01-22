@@ -18,7 +18,7 @@ public:
   virtual ~Header();
   
 public:
-  void OnLoginReceived(const char* sessionId);
+  void OnLoginReceived(id controller, const char* sessionId);
 
 protected:
   nuiWidget* mpHeader;

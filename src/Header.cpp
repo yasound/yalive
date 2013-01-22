@@ -10,8 +10,8 @@
 #include "MyRadios.h"
 #include "Radio.h"
 #include "RequestBuilder.h"
-
 #include "LoginViewController.h"
+
 
 Header::Header(nuiWidget* pHeader)
 : mSink(this)
@@ -33,16 +33,13 @@ Header::~Header()
 
 void Header::OnLogin(const nuiEvent& rEvent)
 {
-  NGL_OUT("Login");
-
-  LoginViewController* login = [[LoginViewController alloc] init];
-  [login login:this];
-  [login release];
+  [[LoginViewController alloc] initWithCB:this];
 }
 
 
-void Header::OnLoginReceived(const char* sessionId)
+void Header::OnLoginReceived(id controller, const char* sessionId)
 {
+  [controller release];
   Models::RequestBuilder::Instance()->SetSessionId(sessionId);
   
   Models::MyRadios *pRadios = new Models::MyRadios(sessionId);

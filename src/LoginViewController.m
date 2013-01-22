@@ -16,31 +16,53 @@
 
 @implementation LoginViewController
 
-- (id) init
+- (id) initWithCB:(Header *) cb
 {
   self = [super init];
-  return self;
-}
-
--(void)login:(Header*) cb
-{
+  mpCB = cb;
+  
 #ifdef _COCOA_
-  [[LoginViewControllerCocoa alloc] initWithCB: cb];
-#endif
+  LoginViewControllerCocoa *pImpl = [[LoginViewControllerCocoa alloc] init];
+  pImpl.delegate = self;
+  mpImpl = pImpl;
+# endif
+  
 #ifdef NUI_IPHONE
   LoginViewControllerUIKit *pImpl = [[LoginViewControllerUIKit alloc] initWithNibName:@"LoginViewControllerUIKit" bundle:nil];
   UIWindow *mainWindow = (UIWindow *)([[UIApplication sharedApplication].windows objectAtIndex:0]);
   [mainWindow addSubview:[pImpl view]];
 #endif
+  
+  return self;
+}
+
+-(void) dealloc
+{
+  if (mpImpl)
+  {
+    [mpImpl dealloc];
+  }
+  [super dealloc];
+}
+
+-(void)login:(Header*) cb
+{
 }
 
 -(void)logout
 {
 #ifdef _COCOA_
-  LoginViewControllerCocoa *pImpl = [[LoginViewControllerCocoa alloc] initWithCB:nil];
-  [pImpl dealloc];
+  [mpImpl logout];
 #endif
   
 }
+
+#pragma mark LoginEventsDelegate handlers
+
+- (void) loginCompleted: (NSString *)sessionId
+{
+  mpCB->OnLoginReceived(self, [sessionId cStringUsingEncoding:NSASCIIStringEncoding]);
+}
+
 
 @end
