@@ -17,7 +17,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-      mpWebView = [[UIWebView alloc] init];
+      mpWebView = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
       
       [[self view] addSubview:mpWebView];
       
