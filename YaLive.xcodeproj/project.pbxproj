@@ -288,8 +288,8 @@
 		E5C5912A1672405500BAEDE4 /* iTunesLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iTunesLibrary.h; path = src/iTunesLibrary.h; sourceTree = "<group>"; };
 		E5C5912F1672407400BAEDE4 /* SongDB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SongDB.cpp; path = src/SongDB.cpp; sourceTree = "<group>"; };
 		E5C591301672407400BAEDE4 /* SongDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SongDB.h; path = src/SongDB.h; sourceTree = "<group>"; };
-		E5D64530120A0B92009C26A9 /* YaLiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaLiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5EF6FC811E77DE8000FB337 /* YaLiveCocoaD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaLiveCocoaD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D64530120A0B92009C26A9 /* YaLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5EF6FC811E77DE8000FB337 /* YaLiveD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaLiveD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -428,8 +428,8 @@
 		61A9DFB50B833DE500BC506C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E5EF6FC811E77DE8000FB337 /* YaLiveCocoaD.app */,
-				E5D64530120A0B92009C26A9 /* YaLiveCocoa.app */,
+				E5EF6FC811E77DE8000FB337 /* YaLiveD.app */,
+				E5D64530120A0B92009C26A9 /* YaLive.app */,
 				E5B95D9716A97EDB00D626C8 /* YaLiveD.app */,
 				E5B95E3216A9983E00D626C8 /* YaLive.app */,
 			);
@@ -587,7 +587,7 @@
 			);
 			name = "YaLive OSX";
 			productName = Tempd;
-			productReference = E5D64530120A0B92009C26A9 /* YaLiveCocoa.app */;
+			productReference = E5D64530120A0B92009C26A9 /* YaLive.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E5EF6FB811E77DE8000FB337 /* YaLiveD OSX */ = {
@@ -605,7 +605,7 @@
 			);
 			name = "YaLiveD OSX";
 			productName = Tempd;
-			productReference = E5EF6FC811E77DE8000FB337 /* YaLiveCocoaD.app */;
+			productReference = E5EF6FC811E77DE8000FB337 /* YaLiveD.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1022,7 +1022,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				PRODUCT_NAME = YaLiveCocoa;
+				PRODUCT_NAME = YaLive;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1051,7 +1051,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = YaLiveCocoaD;
+				PRODUCT_NAME = YaLiveD;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",

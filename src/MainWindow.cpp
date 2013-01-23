@@ -49,6 +49,7 @@ MainWindow::MainWindow(const nglContextInfo& rContextInfo, const nglWindowInfo& 
 
   // Load iTunes DB:
 #ifdef _COCOA_
+#if 0
   nglPath homePath = nglPath(ePathUser);
   nglString iTunePath;
   iTunePath.Format("%s/%s", homePath.GetPathName().GetChars(), "Music/iTunes/iTunes Music Library.xml");
@@ -60,6 +61,7 @@ MainWindow::MainWindow(const nglContextInfo& rContextInfo, const nglWindowInfo& 
   {
     NGL_OUT("Unable to load iTunes library from XML file");
   }
+#endif
 #endif
 }
 
