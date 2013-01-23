@@ -19,6 +19,7 @@ public:
   
 public:
   void OnLoginReceived(id controller, const char* sessionId);
+  void OnLoginCanceledReceived(id controller);
 
 protected:
   nuiWidget* mpHeader;

@@ -49,7 +49,7 @@
 {
   [mpWebView release];
   [mpWindow release];
-  [super release];
+  [super dealloc];
 }
 
 
@@ -97,7 +97,8 @@
 + (BOOL)isSelectorExcludedFromWebScript:(SEL)selector {
   NSLog(@"%@ received %@ for '%@'", self, NSStringFromSelector(_cmd), NSStringFromSelector(selector));
   if (selector == @selector(doOutputToLog:)
-      || selector == @selector(loginCompleted:)) {
+      || selector == @selector(loginCompleted:)
+      || selector == @selector(loginCanceled:)) {
     return NO;
   }
   return YES;
@@ -110,6 +111,8 @@
     return @"log";
   } else if (sel == @selector(loginCompleted:)) {
     return @"loginCompleted";
+  } else if (sel == @selector(loginCanceled:)) {
+    return @"loginCanceled";
   } else {
     return nil;
   }
@@ -129,6 +132,12 @@
 {
   [mpWindow performClose:self];
   [[self delegate] loginCompleted:sessionId];
+}
+
+-(void)loginCanceled:(NSString*)dummy
+{
+  [mpWindow performClose:self];
+  [[self delegate] loginCanceled];
 }
 
 -(void)logout

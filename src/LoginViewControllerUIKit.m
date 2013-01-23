@@ -91,6 +91,10 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     {
       [self loginCompleted:param];
     }
+    else if ([function isEqualToString:@"loginCanceled"])
+    {
+      [self loginCanceled];
+    }
     
     // Cancel the location change
     return NO;
@@ -105,6 +109,12 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 {
   [[self view] removeFromSuperview];
   [[self delegate] loginCompleted:sessionId];
+}
+
+- (void)loginCanceled
+{
+  [[self view] removeFromSuperview];
+  [[self delegate] loginCanceled];
 }
 
 

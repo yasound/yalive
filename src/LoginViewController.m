@@ -64,5 +64,10 @@
   mpCB->OnLoginReceived(self, [sessionId cStringUsingEncoding:NSASCIIStringEncoding]);
 }
 
+- (void) loginCanceled
+{
+  mpCB->OnLoginCanceledReceived(self);
+}
+
 
 @end

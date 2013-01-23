@@ -46,6 +46,11 @@ void Header::OnLoginReceived(id controller, const char* sessionId)
   pRadios->Fetch(nuiMakeDelegate(this, &Header::OnRadiosReceived));
 }
 
+void Header::OnLoginCanceledReceived(id controller)
+{
+  [controller release];
+}
+
 void Header::OnRadiosReceived(Models::Collection *pCollection)
 {
   std::vector<Models::Object*>::iterator it = pCollection->mObjects.begin();

@@ -13,6 +13,7 @@
 @protocol LoginEventsDelegate <NSObject>
 @required
 - (void) loginCompleted: (NSString *)sessionId;
+- (void) loginCanceled;
 @end
 
 

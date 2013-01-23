@@ -19,5 +19,6 @@
 @property (nonatomic, retain) UIWebView *mpWebView;
 
 - (void)loginCompleted:(NSString *)sessionId;
+- (void)loginCanceled;
 
 @end
