@@ -47,9 +47,9 @@
 
 - (void)dealloc
 {
-  [mpWebView dealloc];
-  [mpWindow dealloc];
-  [super dealloc];
+  [mpWebView release];
+  [mpWindow release];
+  [super release];
 }
 
 
@@ -139,7 +139,7 @@
   {
     [cookieJar deleteCookie:cookie];
   }
-  [server dealloc];
+  [server release];
 }
 
 

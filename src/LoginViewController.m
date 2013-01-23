@@ -40,7 +40,7 @@
 {
   if (mpImpl)
   {
-    [mpImpl dealloc];
+    [mpImpl release];
   }
   [super dealloc];
 }

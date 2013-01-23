@@ -70,7 +70,7 @@
   {
     [cookieJar deleteCookie:cookie];
   }
-  [server dealloc];
+  [server release];
 }
 
 
