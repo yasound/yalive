@@ -25,8 +25,12 @@ public:
 protected:
   nuiWidget* mpHeader;
   nuiButton* mpLogin;
+  nuiButton* mpTestLogin;
+  nuiButton* mpLogout;
   
   void OnLogin(const nuiEvent& rEvent);
+  void OnTestLogin(const nuiEvent& rEvent);
+  void OnLogout(const nuiEvent& rEvent);
 
   
 private:

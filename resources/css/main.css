@@ -50,10 +50,25 @@
 
 +nuiSimpleContainer Header
 {
-  +nuiButton Login
+  +nuiHBox HeaderBox
   {
-    +nuiLabel{ Text: "Login"; }
     Position: top;
+
+    +nuiButton Login
+    {
+      +nuiLabel{ Text: "Login"; }
+    }
+
+    +nuiButton TestLogin
+    {
+      +nuiLabel{ Text: "Test if logged"; }
+    }
+    
+    +nuiButton Logout
+    {
+      +nuiLabel{ Text: "Logout"; }
+    }
+
   }
 }
 

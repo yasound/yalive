@@ -54,6 +54,17 @@ Models::Object* Models::CurrentUser::ParseObject(nuiJson::Value &data)
   return this;
 }
 
+void Models::CurrentUser::Logout()
+{
+  nglString api = "/api/v1/logout/";
+  nuiHTTPRequest *pRequest = RequestBuilder::Instance()->BuildGetObjectsRequest(api, true, 0, 0, _T("POST"));
+  pRequest->SendRequest(nuiMakeDelegate(this, &Models::CurrentUser::HandleLogoutResponse));
+}
+
+void Models::CurrentUser::HandleLogoutResponse(nuiHTTPRequest* pRequest, nuiHTTPResponse* pResponse)
+{
+  SetSessionId("");
+}
 
 
 

@@ -23,7 +23,7 @@ namespace Models {
     
   public:
     nuiHTTPRequest* BuildGetObjectRequest(const nglString& api, bool auth=true);
-    nuiHTTPRequest* BuildGetObjectsRequest(const nglString& api, bool auth=true, int offset=0, int limit=25);
+    nuiHTTPRequest* BuildGetObjectsRequest(const nglString& api, bool auth=true, int offset=0, int limit=25, const nglString &method=_T("GET"));
     nglString GetApiUrl(const nglString& api);
     nglString GetApiUrl(const nglString& api, int offset, int limit);
     

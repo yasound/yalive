@@ -20,11 +20,15 @@ Header::Header(nuiWidget* pHeader)
   mpHeader = pHeader;
   NGL_ASSERT(mpHeader);
   
-  mpLogin = (nuiButton*)mpHeader->Find("Login");
+  mpLogin = (nuiButton*)mpHeader->Find("HeaderBox")->Find("Login");
+  mpTestLogin = (nuiButton*)mpHeader->Find("HeaderBox")->Find("TestLogin");
+  mpLogout = (nuiButton*)mpHeader->Find("HeaderBox")->Find("Logout");
   
-  NGL_ASSERT(mpLogin);
+  NGL_ASSERT(mpLogin && mpTestLogin && mpLogout);
   
   mSink.Connect(mpLogin->Activated, &Header::OnLogin);
+  mSink.Connect(mpTestLogin->Activated, &Header::OnTestLogin);
+  mSink.Connect(mpLogout->Activated, &Header::OnLogout);
 }
 
 Header::~Header()
@@ -35,6 +39,16 @@ Header::~Header()
 void Header::OnLogin(const nuiEvent& rEvent)
 {
   [[LoginViewController alloc] initWithCB:this];
+}
+
+void Header::OnTestLogin(const nuiEvent& rEvent)
+{
+  Models::CurrentUser::Instance()->Fetch(nuiMakeDelegate(this, &Header::OnCurrentUserReceived));
+}
+
+void Header::OnLogout(const nuiEvent& rEvent)
+{
+  Models::CurrentUser::Instance()->Logout();
 }
 
 

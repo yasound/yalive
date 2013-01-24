@@ -53,9 +53,9 @@ nuiHTTPRequest* Models::RequestBuilder::BuildGetObjectRequest(const nglString& a
   return pRequest;
 }
 
-nuiHTTPRequest* Models::RequestBuilder::BuildGetObjectsRequest(const nglString& api, bool auth, int offset, int limit)
+nuiHTTPRequest* Models::RequestBuilder::BuildGetObjectsRequest(const nglString& api, bool auth, int offset, int limit, const nglString& method)
 {
-  nuiHTTPRequest *pRequest = new nuiHTTPRequest(this->GetApiUrl(api, offset, limit), _T("GET"));
+  nuiHTTPRequest *pRequest = new nuiHTTPRequest(this->GetApiUrl(api, offset, limit), method);
   if (auth)
   {
     nglString cookies;

@@ -39,8 +39,11 @@ namespace Models {
     void SetSessionId(const nglString& sessionId);
     
     Object* ParseObject(nuiJson::Value &data);
-    bool IsLogged();
+    
+    void Logout();
+    
   private:
+    void HandleLogoutResponse(nuiHTTPRequest* pRequest, nuiHTTPResponse* pResponse);
     
   private:
     nglString mUsername;
