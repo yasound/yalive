@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E31325516B1465300B81E4C /* CurrentUser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E31325316B1465300B81E4C /* CurrentUser.cpp */; };
+		6E31325616B1465300B81E4C /* CurrentUser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E31325316B1465300B81E4C /* CurrentUser.cpp */; };
+		6E31325716B1465300B81E4C /* CurrentUser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E31325316B1465300B81E4C /* CurrentUser.cpp */; };
+		6E31325816B1465300B81E4C /* CurrentUser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E31325316B1465300B81E4C /* CurrentUser.cpp */; };
+		6E31327816B14B7800B81E4C /* CurrentUserUIKit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E31327616B14B7800B81E4C /* CurrentUserUIKit.cpp */; };
+		6E31327916B14B7800B81E4C /* CurrentUserUIKit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E31327616B14B7800B81E4C /* CurrentUserUIKit.cpp */; };
+		6E31327C16B14CEA00B81E4C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E31327B16B14CEA00B81E4C /* Security.framework */; };
+		6E31327D16B14CF200B81E4C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E31327B16B14CEA00B81E4C /* Security.framework */; };
+		6E31328416B15E6C00B81E4C /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E31328116B15E6C00B81E4C /* PDKeychainBindings.m */; };
+		6E31328516B15E6C00B81E4C /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E31328116B15E6C00B81E4C /* PDKeychainBindings.m */; };
+		6E31328616B15E6C00B81E4C /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E31328316B15E6C00B81E4C /* PDKeychainBindingsController.m */; };
+		6E31328716B15E6C00B81E4C /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E31328316B15E6C00B81E4C /* PDKeychainBindingsController.m */; };
+		6E31329D16B17A8A00B81E4C /* CurrentUserCocoa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E31329C16B17A8A00B81E4C /* CurrentUserCocoa.cpp */; };
+		6E31329E16B17A8A00B81E4C /* CurrentUserCocoa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E31329C16B17A8A00B81E4C /* CurrentUserCocoa.cpp */; };
+		6E3132A016B17B1500B81E4C /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E31328116B15E6C00B81E4C /* PDKeychainBindings.m */; };
+		6E3132A116B17B1500B81E4C /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E31328316B15E6C00B81E4C /* PDKeychainBindingsController.m */; };
+		6E3132A216B17B1C00B81E4C /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E31328116B15E6C00B81E4C /* PDKeychainBindings.m */; };
+		6E3132A316B17B1C00B81E4C /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E31328316B15E6C00B81E4C /* PDKeychainBindingsController.m */; };
+		6E3132A516B17B6900B81E4C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3132A416B17B6900B81E4C /* Security.framework */; };
+		6E3132A616B17B7000B81E4C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3132A416B17B6900B81E4C /* Security.framework */; };
 		6E37AB9E16AD877B00C333A4 /* Collection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9116AD877B00C333A4 /* Collection.cpp */; };
 		6E37AB9F16AD877B00C333A4 /* Collection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9116AD877B00C333A4 /* Collection.cpp */; };
 		6E37ABA016AD877B00C333A4 /* Collection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E37AB9116AD877B00C333A4 /* Collection.cpp */; };
@@ -233,6 +253,16 @@
 		61A9DFF00B83433800BC506C /* Application.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Application.h; path = src/Application.h; sourceTree = "<group>"; };
 		61A9DFF10B83433800BC506C /* MainWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = MainWindow.cpp; path = src/MainWindow.cpp; sourceTree = "<group>"; };
 		61A9DFF20B83433800BC506C /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MainWindow.h; path = src/MainWindow.h; sourceTree = "<group>"; };
+		6E31325316B1465300B81E4C /* CurrentUser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CurrentUser.cpp; sourceTree = "<group>"; };
+		6E31325416B1465300B81E4C /* CurrentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentUser.h; sourceTree = "<group>"; };
+		6E31327616B14B7800B81E4C /* CurrentUserUIKit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CurrentUserUIKit.cpp; sourceTree = "<group>"; };
+		6E31327B16B14CEA00B81E4C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		6E31328016B15E6C00B81E4C /* PDKeychainBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindings.h; sourceTree = "<group>"; };
+		6E31328116B15E6C00B81E4C /* PDKeychainBindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindings.m; sourceTree = "<group>"; };
+		6E31328216B15E6C00B81E4C /* PDKeychainBindingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindingsController.h; sourceTree = "<group>"; };
+		6E31328316B15E6C00B81E4C /* PDKeychainBindingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindingsController.m; sourceTree = "<group>"; };
+		6E31329C16B17A8A00B81E4C /* CurrentUserCocoa.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CurrentUserCocoa.cpp; sourceTree = "<group>"; };
+		6E3132A416B17B6900B81E4C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6E37AB9116AD877B00C333A4 /* Collection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Collection.cpp; sourceTree = "<group>"; };
 		6E37AB9216AD877B00C333A4 /* Collection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collection.h; sourceTree = "<group>"; };
 		6E37AB9316AD877B00C333A4 /* MyRadios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyRadios.cpp; sourceTree = "<group>"; };
@@ -297,6 +327,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E31327C16B14CEA00B81E4C /* Security.framework in Frameworks */,
 				E5B95E0D16A988F700D626C8 /* QuartzCore.framework in Frameworks */,
 				E5B95E0516A985D300D626C8 /* Foundation.framework in Frameworks */,
 				E5B95DD616A981EA00D626C8 /* UIKit.framework in Frameworks */,
@@ -316,6 +347,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E31327D16B14CF200B81E4C /* Security.framework in Frameworks */,
 				E5B95E1E16A9983E00D626C8 /* QuartzCore.framework in Frameworks */,
 				E5B95E1F16A9983E00D626C8 /* Foundation.framework in Frameworks */,
 				E5B95E2016A9983E00D626C8 /* UIKit.framework in Frameworks */,
@@ -335,6 +367,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3132A516B17B6900B81E4C /* Security.framework in Frameworks */,
 				6E37ABCF16AD9EFE00C333A4 /* WebKit.framework in Frameworks */,
 				E5D64528120A0B92009C26A9 /* CoreFoundation.framework in Frameworks */,
 				E5D64529120A0B92009C26A9 /* CoreServices.framework in Frameworks */,
@@ -348,6 +381,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3132A616B17B7000B81E4C /* Security.framework in Frameworks */,
 				6E37ABC116AD884700C333A4 /* WebKit.framework in Frameworks */,
 				E5EF6FC011E77DE8000FB337 /* CoreFoundation.framework in Frameworks */,
 				E5EF6FC111E77DE8000FB337 /* CoreServices.framework in Frameworks */,
@@ -363,6 +397,9 @@
 		61A9DE3D0B833C9200BC506C = {
 			isa = PBXGroup;
 			children = (
+				6E3132A416B17B6900B81E4C /* Security.framework */,
+				6E31327E16B15E6C00B81E4C /* ThirdParties */,
+				6E31327B16B14CEA00B81E4C /* Security.framework */,
 				6E37ABC016AD884700C333A4 /* WebKit.framework */,
 				E5C5912216722BA500BAEDE4 /* resources */,
 				E5C5910A1672188500BAEDE4 /* YaLiveCocoa.entitlements */,
@@ -436,6 +473,41 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6E31327A16B14B7D00B81E4C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				6E31327616B14B7800B81E4C /* CurrentUserUIKit.cpp */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		6E31327E16B15E6C00B81E4C /* ThirdParties */ = {
+			isa = PBXGroup;
+			children = (
+				6E31327F16B15E6C00B81E4C /* PDKeychainBindingsController */,
+			);
+			path = ThirdParties;
+			sourceTree = "<group>";
+		};
+		6E31327F16B15E6C00B81E4C /* PDKeychainBindingsController */ = {
+			isa = PBXGroup;
+			children = (
+				6E31328016B15E6C00B81E4C /* PDKeychainBindings.h */,
+				6E31328116B15E6C00B81E4C /* PDKeychainBindings.m */,
+				6E31328216B15E6C00B81E4C /* PDKeychainBindingsController.h */,
+				6E31328316B15E6C00B81E4C /* PDKeychainBindingsController.m */,
+			);
+			path = PDKeychainBindingsController;
+			sourceTree = "<group>";
+		};
+		6E31329F16B17A9F00B81E4C /* Cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				6E31329C16B17A8A00B81E4C /* CurrentUserCocoa.cpp */,
+			);
+			name = Cocoa;
+			sourceTree = "<group>";
+		};
 		6E37AB9016AD877B00C333A4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +519,10 @@
 				6E37AB9616AD877B00C333A4 /* Object.h */,
 				6E37AB9716AD877B00C333A4 /* Radio.cpp */,
 				6E37AB9816AD877B00C333A4 /* Radio.h */,
+				6E31325316B1465300B81E4C /* CurrentUser.cpp */,
+				6E31329F16B17A9F00B81E4C /* Cocoa */,
+				6E31327A16B14B7D00B81E4C /* UIKit */,
+				6E31325416B1465300B81E4C /* CurrentUser.h */,
 				6E37AB9916AD877B00C333A4 /* RequestBuilder.cpp */,
 				6E37AB9A16AD877B00C333A4 /* RequestBuilder.h */,
 			);
@@ -827,6 +903,10 @@
 				6E37ABCB16AD896000C333A4 /* Header.cpp in Sources */,
 				6E37ABD816ADA4ED00C333A4 /* LoginViewController.m in Sources */,
 				6E43786E16ADDD4B008718E5 /* LoginViewControllerUIKit.m in Sources */,
+				6E31325716B1465300B81E4C /* CurrentUser.cpp in Sources */,
+				6E31327816B14B7800B81E4C /* CurrentUserUIKit.cpp in Sources */,
+				6E31328416B15E6C00B81E4C /* PDKeychainBindings.m in Sources */,
+				6E31328616B15E6C00B81E4C /* PDKeychainBindingsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -852,6 +932,10 @@
 				6E37ABCC16AD896000C333A4 /* Header.cpp in Sources */,
 				6E37ABD916ADA4ED00C333A4 /* LoginViewController.m in Sources */,
 				6E43786F16ADDD4B008718E5 /* LoginViewControllerUIKit.m in Sources */,
+				6E31325816B1465300B81E4C /* CurrentUser.cpp in Sources */,
+				6E31327916B14B7800B81E4C /* CurrentUserUIKit.cpp in Sources */,
+				6E31328516B15E6C00B81E4C /* PDKeychainBindings.m in Sources */,
+				6E31328716B15E6C00B81E4C /* PDKeychainBindingsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,6 +943,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3132A216B17B1C00B81E4C /* PDKeychainBindings.m in Sources */,
+				6E3132A316B17B1C00B81E4C /* PDKeychainBindingsController.m in Sources */,
 				E5D64525120A0B92009C26A9 /* Application.cpp in Sources */,
 				E5D64526120A0B92009C26A9 /* MainWindow.cpp in Sources */,
 				E5C59113167223B800BAEDE4 /* Deck.cpp in Sources */,
@@ -872,6 +958,8 @@
 				6E37ABCE16AD9EE400C333A4 /* LoginViewControllerCocoa.m in Sources */,
 				6E37ABCA16AD896000C333A4 /* Header.cpp in Sources */,
 				6E37ABD716ADA4ED00C333A4 /* LoginViewController.m in Sources */,
+				6E31325616B1465300B81E4C /* CurrentUser.cpp in Sources */,
+				6E31329E16B17A8A00B81E4C /* CurrentUserCocoa.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,6 +967,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3132A016B17B1500B81E4C /* PDKeychainBindings.m in Sources */,
+				6E3132A116B17B1500B81E4C /* PDKeychainBindingsController.m in Sources */,
 				E5EF6FBC11E77DE8000FB337 /* Application.cpp in Sources */,
 				E5EF6FBD11E77DE8000FB337 /* MainWindow.cpp in Sources */,
 				E5C59112167223B800BAEDE4 /* Deck.cpp in Sources */,
@@ -892,6 +982,8 @@
 				6E37ABC416AD886600C333A4 /* LoginViewControllerCocoa.m in Sources */,
 				6E37ABC916AD896000C333A4 /* Header.cpp in Sources */,
 				6E37ABD616ADA4ED00C333A4 /* LoginViewController.m in Sources */,
+				6E31325516B1465300B81E4C /* CurrentUser.cpp in Sources */,
+				6E31329D16B17A8A00B81E4C /* CurrentUserCocoa.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

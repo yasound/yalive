@@ -10,6 +10,7 @@
 #include "MyRadios.h"
 #include "Radio.h"
 #include "RequestBuilder.h"
+#include "CurrentUser.h"
 #include "LoginViewController.h"
 
 
@@ -40,9 +41,11 @@ void Header::OnLogin(const nuiEvent& rEvent)
 void Header::OnLoginReceived(id controller, const char* sessionId)
 {
   [controller release];
-  Models::RequestBuilder::Instance()->SetSessionId(sessionId);
+  Models::CurrentUser::Instance()->SetSessionId(sessionId);
   
-  Models::MyRadios *pRadios = new Models::MyRadios(sessionId);
+  Models::CurrentUser::Instance()->Fetch(nuiMakeDelegate(this, &Header::OnCurrentUserReceived));
+                                         
+  Models::MyRadios *pRadios = new Models::MyRadios();
   pRadios->Fetch(nuiMakeDelegate(this, &Header::OnRadiosReceived));
 }
 
@@ -67,3 +70,9 @@ void Header::OnRadiosReceived(Models::Collection *pCollection)
   NGL_OUT("Yes!!!\n");
   delete pCollection;
 }
+
+void Header::OnCurrentUserReceived(Models::Object *pCurrentUser)
+{
+  NGL_OUT("Current user received!!!\n");
+}
+

@@ -8,7 +8,7 @@
 
 #include "Radio.h"
 
-Models::Radio* Models::Radio::Parse(nuiJson::Value &data)
+Models::Object* Models::Radio::ParseObject(nuiJson::Value &data)
 {
   for (uint32 i = 0; i < data.getMemberNames().size(); i++)
   {

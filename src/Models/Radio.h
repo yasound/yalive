@@ -19,8 +19,6 @@ namespace Models {
     Radio() {};
     virtual ~Radio() {};
     
-    Radio* Parse(nuiJson::Value &data);
-    
     // Getter/setters
     const nglString &GetName()
     {
@@ -31,6 +29,7 @@ namespace Models {
     {
       mName = name;
     }
+    Object* ParseObject(nuiJson::Value &data);
     
   private:
     nglString mName;

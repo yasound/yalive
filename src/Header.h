@@ -10,6 +10,7 @@
 
 #include "nui.h"
 #include "Collection.h"
+#include "CurrentUser.h"
 
 class Header
 {
@@ -29,6 +30,7 @@ protected:
 
   
 private:
+  void OnCurrentUserReceived(Models::Object *pCurrentUser);
   void OnRadiosReceived(Models::Collection *pCollection);
   
   nuiEventSink<Header> mSink;

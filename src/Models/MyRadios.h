@@ -16,7 +16,7 @@ namespace Models {
   class MyRadios : public Collection
   {
   public:
-    MyRadios(const nglString& sessionId);
+    MyRadios();
     virtual ~MyRadios();
   
   protected:

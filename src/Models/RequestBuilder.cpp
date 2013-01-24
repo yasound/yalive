@@ -7,6 +7,7 @@
 //
 #include "Settings.h"
 #include "RequestBuilder.h"
+#include "CurrentUser.h"
 
 /*
  * Static constructor
@@ -40,18 +41,13 @@ Models::RequestBuilder::~RequestBuilder()
  * Public methods
  */
 
-void Models::RequestBuilder::SetSessionId(const nglString &sessionId)
-{
-  mSessionId = sessionId;
-}
-
 nuiHTTPRequest* Models::RequestBuilder::BuildGetObjectRequest(const nglString& api, bool auth)
 {
   nuiHTTPRequest *pRequest = new nuiHTTPRequest(this->GetApiUrl(api), _T("GET"));
   if (auth)
   {
     nglString cookies;
-    cookies.Format("sessionid=%s", this->mSessionId.GetChars());
+    cookies.Format("sessionid=%s", CurrentUser::Instance()->GetSessionId().GetChars());
     pRequest->AddHeader(_T("Cookie"), cookies);
   }
   return pRequest;
@@ -63,7 +59,7 @@ nuiHTTPRequest* Models::RequestBuilder::BuildGetObjectsRequest(const nglString& 
   if (auth)
   {
     nglString cookies;
-    cookies.Format("sessionid=%s", this->mSessionId.GetChars());
+    cookies.Format("sessionid=%s", CurrentUser::Instance()->GetSessionId().GetChars());
     pRequest->AddHeader(_T("Cookie"), cookies);
   }
   return pRequest;

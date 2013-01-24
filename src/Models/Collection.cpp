@@ -9,8 +9,7 @@
 #include "Collection.h"
 #include "RequestBuilder.h"
 
-Models::Collection::Collection(const nglString& sessionId)
-:mSessionId(sessionId)
+Models::Collection::Collection()
 {
   mAuth = false;
 }

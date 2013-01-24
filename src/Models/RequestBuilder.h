@@ -22,7 +22,6 @@ namespace Models {
     virtual ~RequestBuilder();
     
   public:
-    void SetSessionId(const nglString& sessionId);
     nuiHTTPRequest* BuildGetObjectRequest(const nglString& api, bool auth=true);
     nuiHTTPRequest* BuildGetObjectsRequest(const nglString& api, bool auth=true, int offset=0, int limit=25);
     nglString GetApiUrl(const nglString& api);
@@ -31,7 +30,6 @@ namespace Models {
     
   private:
     static RequestBuilder* mpInstance;
-    nglString mSessionId;
     nglString mBaseUrl;
     
   };  

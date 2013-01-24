@@ -19,7 +19,7 @@ namespace Models {
   public:
     typedef nuiFastDelegate1<Collection*> CollectionResponseDelegate;
 
-    Collection(const nglString& sessionId);
+    Collection();
     virtual ~Collection();
     
     void Fetch(const CollectionResponseDelegate& rDelegate, int offset=0, int limit=25);
@@ -38,7 +38,6 @@ namespace Models {
     CollectionResponseDelegate mDelegate;
     nglString mApi;
     bool mAuth;
-    nglString mSessionId;
     
     class Header
     {

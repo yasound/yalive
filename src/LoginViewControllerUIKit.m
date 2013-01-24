@@ -19,10 +19,17 @@
     if (self) {
       CGRect bounds = [[UIScreen mainScreen] bounds];
       mpToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, bounds.size.width, 44)];
+
+      UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(onCancel:)];
+      
+      NSArray *items = [NSArray arrayWithObjects:item1, nil];
+      [mpToolbar setItems:items animated:NO];
+      
+      [item1 release];
       
       CGRect webViewRect = CGRectMake(0, mpToolbar.frame.size.height, bounds.size.width, bounds.size.width-mpToolbar.frame.size.height);
       mpWebView = [[UIWebView alloc] initWithFrame:webViewRect];
-      
+
       [[self view] addSubview:mpWebView];
       [[self view] addSubview:mpToolbar];
       
@@ -40,7 +47,9 @@
   [self logout];
   NSString *urlString = [[NSString alloc] initWithFormat:@"%s/live/login/", YASOUND_SERVER];
   NSURL *url = [NSURL URLWithString:urlString];
-  NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+  NSMutableURLRequest *requestObj = [NSMutableURLRequest requestWithURL:url];
+  [requestObj setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];
+  
   mpWebView.delegate = self;
   [mpWebView loadRequest:requestObj];
 }
@@ -121,6 +130,11 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 {
   [[self view] removeFromSuperview];
   [[self delegate] loginCanceled];
+}
+
+- (void)onCancel:(id)sender;
+{
+  [self loginCanceled];
 }
 
 

@@ -20,7 +20,9 @@
 @property (nonatomic, retain) UIWebView *mpWebView;
 @property (nonatomic, retain) UIToolbar *mpToolbar;
 
+- (void)onCancel;
+
 - (void)loginCompleted:(NSString *)sessionId;
-- (void)loginCanceled;
+- (void)loginCanceled:(id)sender;
 
 @end
