@@ -10,16 +10,21 @@
 #import "Settings.h"
 
 @implementation LoginViewControllerUIKit
-@synthesize mpWebView;
+@synthesize mpWebView, mpToolbar;
 @synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-      mpWebView = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+      CGRect bounds = [[UIScreen mainScreen] bounds];
+      mpToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, bounds.size.width, 44)];
+      
+      CGRect webViewRect = CGRectMake(0, mpToolbar.frame.size.height, bounds.size.width, bounds.size.width-mpToolbar.frame.size.height);
+      mpWebView = [[UIWebView alloc] initWithFrame:webViewRect];
       
       [[self view] addSubview:mpWebView];
+      [[self view] addSubview:mpToolbar];
       
       UIWindow *mainWindow = (UIWindow *)([[UIApplication sharedApplication].windows objectAtIndex:0]);
       [mainWindow addSubview:[self view]];
@@ -42,6 +47,7 @@
 
 - (void)dealloc
 {
+  [mpToolbar release];
   [mpWebView release];
   [super dealloc];
 }
