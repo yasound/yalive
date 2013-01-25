@@ -33,7 +33,8 @@ protected:
   void OnTestLogin(const nuiEvent& rEvent);
   void OnLogout(const nuiEvent& rEvent);
 
-  
+  void ShowLoginButtons(bool show);
+
 private:
   void OnCurrentUserReceived(uint16 statusCode, Models::Object *pObject);
   void OnRadiosReceived(Models::Collection *pCollection);

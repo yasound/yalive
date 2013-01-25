@@ -31,7 +31,11 @@ Header::Header(nuiWidget* pHeader)
   mSink.Connect(mpTestLogin->Activated, &Header::OnTestLogin);
   mSink.Connect(mpLogout->Activated, &Header::OnLogout);
   
-  Models::CurrentUser::Instance()->Fetch(nuiMakeDelegate(this, &Header::OnCurrentUserReceived));  
+  mpTestLogin->SetVisible(false);
+                          
+  ShowLoginButtons(true);
+  mpLogin->SetEnabled(false);
+  Models::CurrentUser::Instance()->Fetch(nuiMakeDelegate(this, &Header::OnCurrentUserReceived));
 }
 
 Header::~Header()
@@ -41,6 +45,7 @@ Header::~Header()
 
 void Header::OnLogin(const nuiEvent& rEvent)
 {
+  mpLogin->SetEnabled(false);
   [[LoginViewController alloc] initWithCB:this];
 }
 
@@ -53,11 +58,16 @@ void Header::OnLogout(const nuiEvent& rEvent)
 {
   Models::CurrentUser::Instance()->Logout();
   mpLabelLogin->SetText(_T("Not logged in"));
+  mpLogin->SetVisible(true);
+  mpLogin->SetEnabled(true);
+  mpLogout->SetVisible(false);
 }
 
 
 void Header::OnLoginReceived(id controller, const char* sessionId)
 {
+  mpLogin->SetEnabled(true);
+  
   [controller release];
   Models::CurrentUser::Instance()->SetSessionId(sessionId);
   
@@ -69,6 +79,7 @@ void Header::OnLoginReceived(id controller, const char* sessionId)
 
 void Header::OnLoginCanceledReceived(id controller)
 {
+  ShowLoginButtons(true);
   [controller release];
 }
 
@@ -95,8 +106,25 @@ void Header::OnCurrentUserReceived(uint16 statusCode, Models::Object *pObject)
   {
     Models::CurrentUser *pUser = (Models::CurrentUser*) pObject;
     mpLabelLogin->SetText(pUser->GetUsername());
+    ShowLoginButtons(false);
   } else {
     mpLabelLogin->SetText(_T("Not logged in"));
+    ShowLoginButtons(true);
+  }
+}
+
+void Header::ShowLoginButtons(bool show)
+{
+  if (show)
+  {
+    mpLogin->SetVisible(true);
+    mpLogin->SetEnabled(true);
+    mpLogout->SetVisible(false);
+  }
+  else
+  {
+    mpLogin->SetVisible(false);
+    mpLogout->SetVisible(true);
   }
 }
 
