@@ -27,6 +27,7 @@ protected:
   nuiButton* mpLogin;
   nuiButton* mpTestLogin;
   nuiButton* mpLogout;
+  nuiLabel* mpLabelLogin;
   
   void OnLogin(const nuiEvent& rEvent);
   void OnTestLogin(const nuiEvent& rEvent);
@@ -34,7 +35,7 @@ protected:
 
   
 private:
-  void OnCurrentUserReceived(Models::Object *pCurrentUser);
+  void OnCurrentUserReceived(uint16 statusCode, Models::Object *pObject);
   void OnRadiosReceived(Models::Collection *pCollection);
   
   nuiEventSink<Header> mSink;

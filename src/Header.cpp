@@ -23,12 +23,15 @@ Header::Header(nuiWidget* pHeader)
   mpLogin = (nuiButton*)mpHeader->Find("HeaderBox")->Find("Login");
   mpTestLogin = (nuiButton*)mpHeader->Find("HeaderBox")->Find("TestLogin");
   mpLogout = (nuiButton*)mpHeader->Find("HeaderBox")->Find("Logout");
+  mpLabelLogin = (nuiLabel*)mpHeader->Find("HeaderBox")->Find("LabelLogin");
   
-  NGL_ASSERT(mpLogin && mpTestLogin && mpLogout);
+  NGL_ASSERT(mpLogin && mpTestLogin && mpLogout && mpLabelLogin);
   
   mSink.Connect(mpLogin->Activated, &Header::OnLogin);
   mSink.Connect(mpTestLogin->Activated, &Header::OnTestLogin);
   mSink.Connect(mpLogout->Activated, &Header::OnLogout);
+  
+  Models::CurrentUser::Instance()->Fetch(nuiMakeDelegate(this, &Header::OnCurrentUserReceived));  
 }
 
 Header::~Header()
@@ -49,6 +52,7 @@ void Header::OnTestLogin(const nuiEvent& rEvent)
 void Header::OnLogout(const nuiEvent& rEvent)
 {
   Models::CurrentUser::Instance()->Logout();
+  mpLabelLogin->SetText(_T("Not logged in"));
 }
 
 
@@ -85,8 +89,14 @@ void Header::OnRadiosReceived(Models::Collection *pCollection)
   delete pCollection;
 }
 
-void Header::OnCurrentUserReceived(Models::Object *pCurrentUser)
+void Header::OnCurrentUserReceived(uint16 statusCode, Models::Object *pObject)
 {
-  NGL_OUT("Current user received!!!\n");
+  if (statusCode == 200)
+  {
+    Models::CurrentUser *pUser = (Models::CurrentUser*) pObject;
+    mpLabelLogin->SetText(pUser->GetUsername());
+  } else {
+    mpLabelLogin->SetText(_T("Not logged in"));
+  }
 }
 

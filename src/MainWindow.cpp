@@ -29,7 +29,9 @@ MainWindow::MainWindow(const nglContextInfo& rContextInfo, const nglWindowInfo& 
 
   nuiWidget* pWidget = NULL;
   
-  pWidget = nuiBuilder::Get().CreateWidget(_T("Header"));
+  std::map<nglString, nglString> dictHeader;
+  dictHeader["UserEmail"] = _T("Not logged in");
+  pWidget = nuiBuilder::Get().CreateWidget(_T("Header"), dictHeader);
   pWidget->SetPosition(nuiTop);
   AddChild(pWidget);
   mpHeader = new Header(pWidget);

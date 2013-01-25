@@ -16,7 +16,7 @@ namespace Models {
   class Object
   {
   public:
-    typedef nuiFastDelegate1<Object*> ObjectResponseDelegate;
+    typedef nuiFastDelegate2<uint16, Object* > ObjectResponseDelegate;
     Object();
     virtual ~Object() {};
     

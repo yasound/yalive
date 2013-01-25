@@ -33,7 +33,7 @@ void Models::Object::HandleResponse(nuiHTTPRequest* pRequest, nuiHTTPResponse* p
     {
       ParseObject(root);
     }
-    mDelegate(this);
+    mDelegate(pResponse->GetStatusCode(), this);
   }
 }
 

@@ -54,6 +54,8 @@
   {
     Position: top;
 
+    +nuiLabel LabelLogin { Text: UserEmail; }
+
     +nuiButton Login
     {
       +nuiLabel{ Text: "Login"; }
