@@ -11,9 +11,8 @@
 #import "WebKit/WebKit.h"
 #import "LoginViewController.h"
 
-@interface LoginViewControllerCocoa : NSWindowController
+@interface LoginViewControllerCocoa : NSWindowController<NSWindowDelegate>
 {
-  NSWindow *mpWindow;
   WebView *mpWebView;
   id <LoginEventsDelegate> delegate;
 }
@@ -25,5 +24,7 @@
 
 -(void)loginCompleted:(NSString*)sessionId;
 -(void)loginCanceled:(NSString*)dummy;
+-(void)onCancel:(id)sender;
+
 -(void)logout;
 @end

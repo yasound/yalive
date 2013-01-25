@@ -18,28 +18,37 @@
 {
   self = [super init];
   [self logout];
-  mpWindow = [[NSWindow alloc]
-                      initWithContentRect: NSMakeRect(0, 0, 640, 650)
+  self.window = [[NSWindow alloc]
+                      initWithContentRect: NSMakeRect(0, 0, 800, 650)
                       styleMask: NSTitledWindowMask | NSClosableWindowMask
                       backing: NSBackingStoreBuffered
                       defer: NO];
-  [mpWindow setTitle: @"New Window"];
-  [mpWindow center];
-  [mpWindow makeKeyAndOrderFront:nil];
+  [self.window setTitle: @"Login"];
+  [self.window setDelegate:self];
   
-  mpWebView = [[WebView alloc] initWithFrame:NSMakeRect(0, 0, 640, 650)];
+  mpWebView = [[WebView alloc] initWithFrame:NSMakeRect(0, 50, 800, 600)];
   
-  NSView *superview = [mpWindow contentView];
+  NSView *superview = [self.window contentView];
   [superview addSubview:mpWebView];
-
   [mpWebView setUIDelegate: self];
   [mpWebView setResourceLoadDelegate: self];
+  
+  NSRect frame = NSMakeRect(320, 10, 160, 30);
+  NSButton *button = [[NSButton alloc] initWithFrame:frame];
+  [button setButtonType:NSMomentaryLightButton]; //Set what type button You want
+  [button setBezelStyle:NSRoundedBezelStyle]; //Set what style You want
+  [button setTitle:@"Cancel"];
+  [button setTarget:self];
+  [button setAction:@selector(onCancel:)];
+  [superview addSubview:button];
+  [button release];
   
   
   NSString *urlString = [[NSString alloc] initWithFormat:@"%s/live/login/", YASOUND_SERVER];
   [[mpWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
   
   [urlString release];
+
   [self windowDidLoad];
   return self;
 }
@@ -48,7 +57,7 @@
 - (void)dealloc
 {
   [mpWebView release];
-  [mpWindow release];
+  [self.window release];
   [super dealloc];
 }
 
@@ -56,8 +65,8 @@
 - (void)windowDidLoad
 {
   [super windowDidLoad];
-  [mpWindow center];
-  [mpWindow makeKeyAndOrderFront:nil];
+  [self.window center];
+  [self.window makeKeyAndOrderFront:nil];
 }
 
 - (void)webView:(WebView *)sender didClearWindowObject:(WebScriptObject *)windowObject forFrame:(WebFrame *)frame
@@ -130,13 +139,14 @@
 // implements console.loginCompleted(sessionid)
 -(void)loginCompleted:(NSString*)sessionId
 {
-  [mpWindow performClose:self];
+  [self.window performClose:self];
   [[self delegate] loginCompleted:sessionId];
+  [NSApp abortModal];
 }
 
 -(void)loginCanceled:(NSString*)dummy
 {
-  [mpWindow performClose:self];
+  [self.window performClose:self];
   [[self delegate] loginCanceled];
 }
 
@@ -151,5 +161,14 @@
   [server release];
 }
 
+-(void)onCancel:(id)sender
+{
+  [self loginCanceled:@""];
+}
+
+-(void)windowWillClose:(NSNotification *)notification
+{
+  [[self delegate] loginCanceled];
+}
 
 @end
