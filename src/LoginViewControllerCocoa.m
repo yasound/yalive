@@ -32,6 +32,7 @@
   [superview addSubview:mpWebView];
   [mpWebView setUIDelegate: self];
   [mpWebView setResourceLoadDelegate: self];
+  [mpWebView setFrameLoadDelegate:self];
   
   NSRect frame = NSMakeRect(320, 10, 160, 30);
   NSButton *button = [[NSButton alloc] initWithFrame:frame];
@@ -45,6 +46,7 @@
   
   
   NSString *urlString = [[NSString alloc] initWithFormat:@"%s/live/login/", YASOUND_SERVER];
+  [[mpWebView windowScriptObject] setValue:self forKey:@"console"];
   [[mpWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
   
   [urlString release];
@@ -69,12 +71,11 @@
   [self.window makeKeyAndOrderFront:nil];
 }
 
+
 - (void)webView:(WebView *)sender didClearWindowObject:(WebScriptObject *)windowObject forFrame:(WebFrame *)frame
 {
-  NSLog(@"%@ received %@", self, NSStringFromSelector(_cmd));
   [windowObject setValue:self forKey:@"console"];
 }
-
 
 // called multiple times but at least it is called :(
 - (void)webView:(WebView *)sender resource:(id)identifier didFinishLoadingFromDataSource:(WebDataSource *)dataSource
@@ -84,7 +85,6 @@
 
 - (void)webView:(WebView *)sender resource:(id)identifier didFailLoadingWithError:(NSError *)error fromDataSource:(WebDataSource *)dataSource
 {
-  NSLog(@"%@ received %@", self, NSStringFromSelector(_cmd));
 }
 
 // javascript alert() callback
@@ -93,18 +93,8 @@
   NSLog(@"%@ received %@ with '%@'", self, NSStringFromSelector(_cmd), message);
 }
 
-// in theory, it should be called whenever javascript is loaded.
-// in practice it is never called :(
-- (void)webView:(WebView *)webView windowScriptObjectAvailable:(WebScriptObject *)windowScriptObject {
-  NSLog(@"%@ received %@", self, NSStringFromSelector(_cmd));
-  
-  [windowScriptObject setValue:self forKey:@"console"];
-  
-}
-
 // return allowed methods from javascript
 + (BOOL)isSelectorExcludedFromWebScript:(SEL)selector {
-  NSLog(@"%@ received %@ for '%@'", self, NSStringFromSelector(_cmd), NSStringFromSelector(selector));
   if (selector == @selector(doOutputToLog:)
       || selector == @selector(loginCompleted:)
       || selector == @selector(loginCanceled:)) {
@@ -115,7 +105,6 @@
 
 // javascript method name to obj selector mapping
 + (NSString *) webScriptNameForSelector:(SEL)sel {
-  NSLog(@"%@ received %@ with sel='%@'", self, NSStringFromSelector(_cmd), NSStringFromSelector(sel));
   if (sel == @selector(doOutputToLog:)) {
     return @"log";
   } else if (sel == @selector(loginCompleted:)) {
@@ -129,10 +118,8 @@
 
 // implements console.log()
 - (void) doOutputToLog: (NSString*) theMessage {
-  NSLog(@"%@ received %@ with message=%@", self, NSStringFromSelector(_cmd), theMessage);
-  
   /* write the message to the log */
-  NSLog(@"LOG: %@", theMessage);
+  NSLog(@"console: %@", theMessage);
   
 }
 

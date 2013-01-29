@@ -17,7 +17,7 @@ namespace Models {
   class Collection
   {
   public:
-    typedef nuiFastDelegate1<Collection*> CollectionResponseDelegate;
+    typedef nuiFastDelegate2<uint16, Collection*> CollectionResponseDelegate;
 
     Collection();
     virtual ~Collection();

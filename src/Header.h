@@ -37,7 +37,7 @@ protected:
 
 private:
   void OnCurrentUserReceived(uint16 statusCode, Models::Object *pObject);
-  void OnRadiosReceived(Models::Collection *pCollection);
+  void OnRadiosReceived(uint16 statusCode, Models::Collection *pCollection);
   
   nuiEventSink<Header> mSink;
 };

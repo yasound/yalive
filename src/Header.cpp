@@ -66,6 +66,8 @@ void Header::OnLogout(const nuiEvent& rEvent)
 
 void Header::OnLoginReceived(id controller, const char* sessionId)
 {
+  NGL_OUT("Received sessionid=%s\n", sessionId);
+  
   mpLogin->SetEnabled(true);
   
   [controller release];
@@ -74,6 +76,7 @@ void Header::OnLoginReceived(id controller, const char* sessionId)
   Models::CurrentUser::Instance()->Fetch(nuiMakeDelegate(this, &Header::OnCurrentUserReceived));
                                          
   Models::MyRadios *pRadios = new Models::MyRadios();
+  NGL_OUT("Fetching owner radios\n");
   pRadios->Fetch(nuiMakeDelegate(this, &Header::OnRadiosReceived));
 }
 
@@ -83,8 +86,9 @@ void Header::OnLoginCanceledReceived(id controller)
   [controller release];
 }
 
-void Header::OnRadiosReceived(Models::Collection *pCollection)
+void Header::OnRadiosReceived(uint16 statusCode, Models::Collection *pCollection)
 {
+  NGL_OUT("Received radios (status=%d)\n", statusCode);
   std::vector<Models::Object*>::iterator it = pCollection->mObjects.begin();
   std::vector<Models::Object*>::iterator end = pCollection->mObjects.end();
   
@@ -95,8 +99,6 @@ void Header::OnRadiosReceived(Models::Collection *pCollection)
     ++it;
   }
   
-  
-  NGL_OUT("Yes!!!\n");
   delete pCollection;
 }
 

@@ -47,7 +47,7 @@ void Models::Collection::HandleResponse(nuiHTTPRequest* pRequest, nuiHTTPRespons
     {
       ParseJson(root);
     }
-    mDelegate(this);
+    mDelegate(pResponse->GetStatusCode(), this);
   }
 }
 
