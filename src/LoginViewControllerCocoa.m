@@ -45,6 +45,17 @@
   [button release];
   
   
+  NSRect progressFrame = NSMakeRect(self.window.frame.size.width/2-9, self.window.frame.size.height/2-18, 50, 50);
+  mpProgressIndicator = [[NSProgressIndicator alloc] initWithFrame:progressFrame];
+  
+  [mpProgressIndicator setBezeled: NO];
+  [mpProgressIndicator setStyle: NSProgressIndicatorSpinningStyle];
+  [mpProgressIndicator setControlSize: NSRegularControlSize];
+  [mpProgressIndicator sizeToFit];
+  [mpProgressIndicator setUsesThreadedAnimation:YES];
+  [superview addSubview:mpProgressIndicator];
+  [mpProgressIndicator startAnimation:self];
+  
   NSString *urlString = [[NSString alloc] initWithFormat:@"%s/live/login/", YASOUND_SERVER];
   [[mpWebView windowScriptObject] setValue:self forKey:@"console"];
   [[mpWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
@@ -58,6 +69,7 @@
 
 - (void)dealloc
 {
+  [mpProgressIndicator release];
   [mpWebView release];
   [self.window release];
   [super dealloc];
@@ -76,6 +88,7 @@
 {
   [windowObject setValue:self forKey:@"console"];
 }
+
 
 // called multiple times but at least it is called :(
 - (void)webView:(WebView *)sender resource:(id)identifier didFinishLoadingFromDataSource:(WebDataSource *)dataSource
@@ -157,5 +170,33 @@
 {
   [[self delegate] loginCanceled];
 }
+
+#pragma mark - Load spinner methods
+
+-(void)displaySpin:(id)owner
+{
+  [mpProgressIndicator setHidden:FALSE];
+  [mpProgressIndicator startAnimation:self];
+}
+
+-(void)hideSpin:(id)owner
+{
+  [mpProgressIndicator stopAnimation:self];
+  [mpProgressIndicator setHidden:YES];
+}
+
+
+#pragma mark - Web frame delegate
+
+-(void)webView:(WebView *)sender didStartProvisionalLoadForFrame:(WebFrame *)frame
+{
+  [self displaySpin:self];
+}
+-(void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
+{
+  [self hideSpin:self];
+  
+}
+
 
 @end

@@ -14,6 +14,7 @@
 @interface LoginViewControllerCocoa : NSWindowController<NSWindowDelegate>
 {
   WebView *mpWebView;
+  NSProgressIndicator *mpProgressIndicator;
   id <LoginEventsDelegate> delegate;
 }
 @property (retain) id delegate;
